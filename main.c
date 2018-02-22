@@ -145,6 +145,7 @@ void packet_begin(){
 	uint8_t buf[5]; 
 	char cbuf[5];
 	char strbuf[10];
+
 	while(1){
 
 		if(count>20){
@@ -211,6 +212,40 @@ void grab_four_bytes(char* cbuf){
 }
 
 
+void grab_packet(char* packet){
+
+	//Reads and writes the next 512 bytes into packet char array
+
+	int count = 0;
+	int read_success;
+	uint8_t buf[5]; 
+	char strbuf[10];
+	int j=0;
+	while(1){
+
+		if(count>507){
+//			pc.write("Terminating...\n\r");
+			return;
+		}
+
+		read_success = dmx.read(buf);
+
+		for(int i = 0; i<read_success; i++){
+			if(i==0){
+//				sprintf(strbuf,"%d- %d - %#2.2x\n\r", j, read_success, buf[i]);
+//				pc.write(strbuf);
+				packet[j] = buf[i];
+			}else{
+//				sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
+//				pc.write(strbuf);
+				packet[j] = buf[i];
+			}
+			j++;
+			count++;
+		}
+	}
+}
+
 int check_zeroes(uint8_t* buf, int len){
 
 	for(int i = 0;i<len;i++){
@@ -228,7 +263,7 @@ void packet_detector(){
 	//Prints whenever a packet is 'found' i.e. detects three 0x00 in a row
 	
 	uint8_t buf[5];
-	char strbuf[24]; //[32]
+	char strbuf[24];
 	int count = 0;
 	int packet_count = 0;
 	int notch = 0;
@@ -265,14 +300,19 @@ void packet_detector(){
 int main()
 {
 	pc.write("Starting...\n\r");
+
 	uint8_t buf[5];
 	char strbuf[32]; //[32]
-	char* packet[512];	
+	char packet[512];	
 	char charbuf[4] = {0xaa, 0xbb, 0xcc, 0xdd};
 	char cbuf[5];
 	int read_success = 0;
-
-	startup_screen();
+	int total_packets = 0;
+	uint8_t lsr;
+	uint8_t bi; 
+	uint8_t rbr;
+	
+startup_screen();
 
 	while (1)
 	{
@@ -290,9 +330,7 @@ int main()
 			return_home();
 			clear_display();
 			printstr("Real-time:");	
-			uint8_t lsr;
-			uint8_t bi; 
-			uint8_t rbr;
+
 			while (state == 1){
 
 				pc.write("Loop begin\n\r");				
@@ -306,7 +344,7 @@ int main()
 					bi = lsr & (1<<4);
 					rbr = LPC_UART1->RBR;
 				}
-
+				
 				grab_four_bytes(cbuf);
 	
 				return_home();
@@ -316,7 +354,7 @@ int main()
 				printstr(strbuf);
 				sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
 				pc.write(strbuf);		
-					
+				total_packets++;	
 	}
 }	
 
@@ -326,14 +364,34 @@ int main()
 			printstr("DMX Inspector -");
 			shift_line();
 			printstr("Byte number:   ");
-			
 
+			while(state==2){
+
+				clear_display();
+				printstr("DMX Inspector - ");
+				shift_line();
+				printstr("Byte number:   ");	
+
+				lsr = LPC_UART1->LSR & 255;
+				bi = lsr & (1<<4);
+
+				while(bi == 0){
+					keypad_check(myaction);
+					lsr = LPC_UART1->LSR & 255;
+					bi = lsr & (1<<4);
+					rbr = LPC_UART1->RBR;
+				}
+				//add keypad_checks() throughout
+				grab_packet(packet);
+				total_packets++;
+				sprintf(strbuf, "Packets: %d\n\r", total_packets);
+				pc.write(strbuf);
+			}
 		}
 	
-		if(state == 255){
+		else if(state == 255){
 			return 0;
 		}	
 	}
-
 }
 
