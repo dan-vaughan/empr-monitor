@@ -52,14 +52,15 @@ void myaction(int button) {
 			clear_display();
 			printstr("DMX Inspector -");
 			shift_line();
-			printstr("Byte number:   ");
 			pc.write("DMX mode selected.\n\r");
+			printstr("Byte number:   ");
 		}
 	}
 	// From state 1 (real) to 2 (packet inspector)
 	if (state == 1){
 		if (labels[button] == 'B'){
 			state = 2;
+			pc.write("DMX mode selected.\n\r");
 			return_home();
 			clear_display();
 			printstr("DMX Inspector -");
@@ -71,6 +72,7 @@ void myaction(int button) {
 	if (state == 2){
 		if (labels[button] == 'A'){
 			state = 1;
+			pc.write("Real mode selected.\n\r");
 			return_home();
 			clear_display();
 			printstr("Real-time...");
@@ -162,7 +164,7 @@ void packet_begin(){
 	char strbuf[10];
 	while(1){
 
-		if(count>40){
+		if(count>20){
 			pc.write("Terminating...\n\r");
 			return;
 		}
@@ -190,6 +192,43 @@ void packet_begin(){
 		}
 	}
 }
+
+void grab_four_bytes(char* cbuf){
+
+	//Reads and returns the next four bytes
+
+	int count = 0;
+	int read_success;
+	uint8_t buf[5]; 
+	//char cbuf[5];
+	char strbuf[10];
+	int j=0;
+	while(1){
+
+		if(count>6){
+			pc.write("Terminating...\n\r");
+			return;
+		}
+
+		read_success = dmx.read(buf);
+
+		for(int i = 0; i<read_success; i++){
+			if(i==0){
+				sprintf(strbuf,"%d - %#2.2x\n\r",read_success, buf[i]);
+				pc.write(strbuf);
+				cbuf[j] = buf[i];
+			}else{
+				sprintf(strbuf,"  - %#2.2x\n\r",buf[i]);
+				pc.write(strbuf);
+				cbuf[j] = buf[i];
+			}
+			j++;
+			count++;
+		}
+	}
+		//return cbuf;
+}
+
 
 int check_zeroes(uint8_t* buf, int len){
 
@@ -249,6 +288,7 @@ int main()
 	char strbuf[32]; //[32]
 	char* packet[512];	
 	char charbuf[4] = {0xaa, 0xbb, 0xcc, 0xdd};
+	char cbuf[5];
 	int count = 0;
 	int packet_count = 0;
 	int notch = 0;
@@ -354,6 +394,21 @@ int main()
 					rbr = LPC_UART1->RBR;
 				}
 				rbr = LPC_UART1->RBR;
+				count = 0;			
+
+	
+				//TRY WITH PACKET BEGIN HERE TO SEE START OF PACKETS {2,3...}
+				grab_four_bytes(cbuf);
+				j++;
+	
+				return_home();
+				shift_line();			
+				sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);
+				printstr(strbuf);
+				sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
+				pc.write(strbuf);		
+					
+				//if(j==2){return 0;}
 				while (count < 512){
 				//pc.write("Break out\n\r");
 
@@ -363,9 +418,17 @@ int main()
 
 				read_success = dmx.read(buf);
 				count += read_success;
-				real[0] = buf[0];
+			
+				if(count<4){
+					real[0] = buf[1];
+				}				
 				
-				if(count>4 && count < 8){
+				/*if(count>4 && count < 8){
+
+					for (int i=0; i <count; i++){
+
+					}
+
 					return_home();
 					shift_line();
 					real[1] = buf[0];
@@ -377,13 +440,13 @@ int main()
 					pc.write(strbuf);		
 				}	
 	
-
+*/
 				//pc.write("Read success.\n\r");	
 				if(count > 512){ count = 0;};	
-				sprintf(strbuf,"Count: %d\n\r", count);		
-				pc.write(strbuf);	
+				//sprintf(strbuf,"Count: %d\n\r", count);		
+				//pc.write(strbuf);	
 			
-				if(count == 4){
+/*				if(count == 4){
 					return_home();
 					shift_line();
 					//sprintf(strbuf, "%#2.2x %#2.2x %#2.2x %#2.2x", buf[0],buf[1],buf[2],buf[3]);
@@ -391,7 +454,7 @@ int main()
 					printstr(strbuf);
 					pc.write(strbuf);
 				}
-
+*/
 	
 		/*		if(read_success==1){
 
@@ -432,7 +495,7 @@ int main()
 					printstr(strbuf);
 					pc.write(strbuf);
 				}
-*/				else if(count>4 && count<512){
+*/				if(count>4 && count<512){
 				//	pc.write("reading...\n\r");	
 					read_success = dmx.read(buf);
 					count += read_success;
@@ -447,6 +510,12 @@ int main()
 
 		else if(state == 2){
 			keypad_check(myaction);
+			clear_display();
+			printstr("DMX Inspector -");
+			shift_line();
+			printstr("Byte number:   ");
+			
+
 		}
 	
 		if(state == 255){
