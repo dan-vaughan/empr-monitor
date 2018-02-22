@@ -94,23 +94,6 @@ void UART1_IRQHandler(void)
 	interrupt = 1;
 }
 
-void dmx_inspector()
-{
-
-
-
-}
-
-void packets_to_lcd(char* buf)
-{
-//			sprintf(buf, "%#2.2x");	
-//		if(strlen(buf) > 4){
-			return_home();
-			shift_line();
-			printstr(buf);
-//		}
-}
-
 void startup_screen()
 {
 	setup_display();
@@ -195,12 +178,11 @@ void packet_begin(){
 
 void grab_four_bytes(char* cbuf){
 
-	//Reads and returns the next four bytes
+	//Reads and writes the next four bytes to cbuf
 
 	int count = 0;
 	int read_success;
 	uint8_t buf[5]; 
-	//char cbuf[5];
 	char strbuf[10];
 	int j=0;
 	while(1){
@@ -226,7 +208,6 @@ void grab_four_bytes(char* cbuf){
 			count++;
 		}
 	}
-		//return cbuf;
 }
 
 
@@ -289,19 +270,7 @@ int main()
 	char* packet[512];	
 	char charbuf[4] = {0xaa, 0xbb, 0xcc, 0xdd};
 	char cbuf[5];
-	int count = 0;
-	int packet_count = 0;
-	int notch = 0;
 	int read_success = 0;
-	int j = 0;
-
-	char red[5] = {0xaa, 0x00, 0x00, 0xff, 0x00};
-	char green[5] = {0x00, 0x00, 0xbb, 0x00, 0x00};
-	char blue[5] = {0x00, 0xcc, 0x00, 0x00, 0x00};
-	char full[5] = {0x00, 0xff, 0xff, 0xff, 0x00};
-	char empty[5] = {0x00, 0x00, 0x00, 0x00, 0x00};
-
-	char* sequence[5] = {red,green,blue,full,empty};
 
 	startup_screen();
 
@@ -314,57 +283,6 @@ int main()
 		//We should only use data that has successfully read.
 
 		
-
-			
-	//	uint8_t byte = UART_ReceiveByte((LPC_UART_TypeDef *)LPC_UART1);
-	
-	//	if(byte != 0){
-	//		count++;
-	//		sprintf(strbuf,"byte: %#2.2x\n\r", byte);
-	//		pc.write(strbuf);	
-	//	}
-
-	//	if(count > 14){
-	//		return 0;
-	//	}
-
-	//	continue;	
-	//	packet_detector();
-
-
-//		packet_begin();
-//		return 0;
-
-//		dmx.send(sequence[j], 5);		
-		
-	//	dmx.write(sequence[j], 1);
-		
-
-
-/*		read_success = dmx.read(buf);
-		if(read_success < 1){
-			buf[0] = 0;
-			buf[1] = 0;
-			buf[2] = 0;
-			buf[3] = 0;
-			buf[4] = 0;
-			continue;
-		}
-
-*/	
-//		sprintf(strbuf,"%d - %#2.2x\n\r", read_success, buf);
-//		for(int i = 0; i<5;i++){
-//		sprintf(strbuf,"%d - %#2.2x - %#2.2x\n\r", i, sequence[j][i], buf[i]);
-//		pc.write(strbuf);
-//}	
-//		j++;
-//		continue;
-//
-	//	sprintf(strbuf, "%#2.2x\n\r");
-//		sprintf(bu, "%d\n\r");
-//		pc.write(buf);
-
-
 		if(state == 0){
 			keypad_check(myaction);
 		}
@@ -372,7 +290,6 @@ int main()
 			return_home();
 			clear_display();
 			printstr("Real-time:");	
-			char real[8] = {0,0,0,0,0,0,0,0};
 			uint8_t lsr;
 			uint8_t bi; 
 			uint8_t rbr;
@@ -380,132 +297,27 @@ int main()
 
 				pc.write("Loop begin\n\r");				
 
-				count = 0;	
 				lsr = LPC_UART1->LSR & 255;
 				bi = lsr & (1<<4);
 			
-				while(bi == 0 || count > 0){
+				while(bi == 0){
 					keypad_check(myaction);
-				//	pc.write("Checking for breaks...\n\r");
-				//	sprintf(strbuf, "bi: %d, lsr: %d, count: %d\n\r", bi, lsr, count);
-				//	pc.write(strbuf);	
 					lsr = LPC_UART1->LSR & 255;
 					bi = lsr & (1<<4);
 					rbr = LPC_UART1->RBR;
 				}
-				rbr = LPC_UART1->RBR;
-				count = 0;			
 
-	
-				//TRY WITH PACKET BEGIN HERE TO SEE START OF PACKETS {2,3...}
 				grab_four_bytes(cbuf);
-				j++;
 	
 				return_home();
 				shift_line();			
-				sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);
+				sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
+				//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
 				printstr(strbuf);
 				sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
 				pc.write(strbuf);		
 					
-				//if(j==2){return 0;}
-				while (count < 512){
-				//pc.write("Break out\n\r");
-
-// WE NEED TO: FROM COUNT 0
-// STORE ALL BYTES READ INTO REAL[8]
-// CUT ALL 0x00s FROM START OF REAL
-
-				read_success = dmx.read(buf);
-				count += read_success;
-			
-				if(count<4){
-					real[0] = buf[1];
-				}				
-				
-				/*if(count>4 && count < 8){
-
-					for (int i=0; i <count; i++){
-
-					}
-
-					return_home();
-					shift_line();
-					real[1] = buf[0];
-					real[2] = buf[1];
-					real[3] = buf[2];
-					sprintf(strbuf, "%3d %3d %3d %3d", real[0], real[1], real[2], real[3]);
-					printstr(strbuf);
-					sprintf(strbuf, "%3d %3d %3d %3d\n\r", real[0], real[1], real[2], real[3]);	
-					pc.write(strbuf);		
-				}	
-	
-*/
-				//pc.write("Read success.\n\r");	
-				if(count > 512){ count = 0;};	
-				//sprintf(strbuf,"Count: %d\n\r", count);		
-				//pc.write(strbuf);	
-			
-/*				if(count == 4){
-					return_home();
-					shift_line();
-					//sprintf(strbuf, "%#2.2x %#2.2x %#2.2x %#2.2x", buf[0],buf[1],buf[2],buf[3]);
-					sprintf(strbuf, "%3d %3d %3d %3d", buf[0], buf[1], buf[2], buf[3]);
-					printstr(strbuf);
-					pc.write(strbuf);
-				}
-*/
-	
-		/*		if(read_success==1){
-
-					while(read_success < 2){
-						read_success = dmx.read(buf);
-						count += read_success;
-						if (buf[0] != 0)
-						real[0] = buf[0];
-					}				
-					
-						real[1] = buf[0];
-						real[2] = buf[1];
-						real[3] = buf[2];	
-
-					return_home();
-					shift_line();
-					sprintf(strbuf, "%#2.2x %#2.2x %#2.2x %#2.2x\n\r", real[0],real[1],real[2],real[3]);
-					printstr(strbuf);
-					pc.write(strbuf);
-				}
-
-				if(count==3){
-					pc.write("Count was 3.\n\r");
-					real[0] = buf[0];
-					while (read_success != 4){
-					pc.write("Trying...\n\r");
-					read_success = dmx.read(buf);
-					}
-					count+= read_success;
-					if(read_success > 4){
-						real[1] = buf[0];
-						real[2] = buf[1];
-						real[3] = buf[2];
-					}
-					return_home();
-					shift_line();
-					sprintf(strbuf, "%#2.2x %#2.2x %#2.2x %#2.2x\n\r", real[0],real[1],real[2],real[4]);
-					printstr(strbuf);
-					pc.write(strbuf);
-				}
-*/				if(count>4 && count<512){
-				//	pc.write("reading...\n\r");	
-					read_success = dmx.read(buf);
-					count += read_success;
-
-				}			
-				//pc.write("read over.\n\r");
-			}
-				count = 0;
-				pc.write("count set to zero\n\r");
-		}
+	}
 }	
 
 		else if(state == 2){
@@ -525,30 +337,3 @@ int main()
 
 }
 
-void break_primitive()
-{
-
-		char strbuf[32];
-
-		while(1){
-		uint8_t lsr= LPC_UART1->LSR & 255;// & (1<<4);
-		uint8_t ier = LPC_UART1->IER &= (1<<2);;
-		uint32_t iir = LPC_UART1->IIR & 14;
-		int rbr2 = LPC_UART1->RBR;
-		sprintf(strbuf, "BreakInt: %d IER: %d IIR: %d\n\r", lsr, ier, iir);
-		pc.write(strbuf);
-
-		if(lsr != 96){ 
-			pc.write("BREAK DETECTED\n\r");
-			uint32_t iir = LPC_UART1->IIR & 14;
-			sprintf(strbuf, "IIR: %d\n\r", iir);
-			pc.write(strbuf);
-			//NVIC_ClearPendingIRQ(UART1_IRQn);
-			LPC_UART1->IER |= (1<<2);
-			int rbr = LPC_UART1->RBR;
-			//return 0;
-		}
-
-
-	}
-}
