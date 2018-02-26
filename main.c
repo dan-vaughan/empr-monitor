@@ -16,15 +16,15 @@ Serial pc; // tx, rx
 DMX dmx;
 
 int state = 0;
-char packet[512];
-
 int interrupt = 0;
+int total_packets = 0;
+
+char packet[512];	
 
 void packet_begin();
-void packet_detector();
 
-void myaction(int button) {
-
+void myaction(int button)
+{
 	printchar(labels[button]);
 
 	if(labels[button] == '7'){
@@ -32,9 +32,6 @@ void myaction(int button) {
 		packet_begin();
 		state = 255;
 		return;
-	}
-	if(labels[button] == '8'){
-		packet_detector();
 	}
 	
 	//From state 0 to {1,2}	
@@ -78,6 +75,10 @@ void myaction(int button) {
 			printstr("Real-time...");
 			shift_line();
 		}
+		if (labels[button] == '#'){
+			state = 3;
+			pc.write("Capturing next packet...\n\r");
+		}
 	}
 }
 
@@ -106,7 +107,7 @@ void startup_screen()
 	printstr("B: DMX Inspector");
 	return_home();
 }
-
+/*
 void print_packet(char* packet)
 {	
 	char str_buf[20];
@@ -117,8 +118,8 @@ void print_packet(char* packet)
 	}	
 }
 
-void print_buflen(int n){
-
+void print_buflen(int n)
+{
 	//Test function 
 	//Prints the next n bytes received
 
@@ -133,9 +134,9 @@ void print_buflen(int n){
 
 
 };
-
-void packet_begin(){
-
+*/
+void packet_begin()
+{
 	//Reads and prints the first 20 bytes.
 
 	//Check if 1-reads correspond to BREAK and MAB
@@ -177,7 +178,8 @@ void packet_begin(){
 	}
 }
 
-void grab_four_bytes(char* cbuf){
+void grab_four_bytes(char* cbuf)
+{
 
 	//Reads and writes the next four bytes to cbuf
 
@@ -212,89 +214,71 @@ void grab_four_bytes(char* cbuf){
 }
 
 
-void grab_packet(char* packet){
-
+void grab_packet()
+{
 	//Reads and writes the next 512 bytes into packet char array
 
 	int count = 0;
 	int read_success;
 	uint8_t buf[5]; 
 	char strbuf[10];
+	char mstrbuf[512];
 	int j=0;
+
 	while(1){
 
 		if(count>507){
-//			pc.write("Terminating...\n\r");
+			pc.write("\n\rTerminating...\n\r");
+//			pc.write(mstrbuf);
 			return;
 		}
 
 		read_success = dmx.read(buf);
-
+		//pc.write("Trying read...\n\r");
 		for(int i = 0; i<read_success; i++){
-			if(i==0){
+			
+			if (packet[j+i] != buf[i]){				//CODE DETECTS CHANGES BETWEEN NEW AND OLD PACKET
+				sprintf(strbuf,"%d- %#2.2x \n\r", j+i, buf[i]);
+				pc.write(strbuf);
+				strcat(mstrbuf, strbuf);		
+			}
+//			if(i==0){
 //				sprintf(strbuf,"%d- %d - %#2.2x\n\r", j, read_success, buf[i]);
 //				pc.write(strbuf);
-				packet[j] = buf[i];
-			}else{
+	//			packet[j] = buf[i];
+//			}else{
 //				sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
 //				pc.write(strbuf);
-				packet[j] = buf[i];
-			}
+//				packet[j] = buf[i]; 
+//			}
+		}
 			j++;
 			count++;
-		}
 	}
 }
 
-int check_zeroes(uint8_t* buf, int len){
+void print_packet()
+{
 
-	for(int i = 0;i<len;i++){
+	char strbuf[128];
+	char strbuf2[5];	
+	char message[20];
 
-		if(buf[i] != 0){
-			return 0;
+	strbuf[0] = '\0';
+	strbuf2[0] = '\0';
+
+	sprintf(message,"Packet no. %d:\n\r\n\r", total_packets);
+	pc.write(message);
+
+	for(int i=0; i<16; i++){
+		for (int j=0; j<32;j++){
+			sprintf(strbuf2, "%2.2x-",packet[((i*16)+j)]);
+			strcat(strbuf, strbuf2);
 		}
+		pc.write(strbuf);
+		strbuf[0] = '\0';
 	}
-	return 1;
-}
-
-void packet_detector(){
-
-	//Reads, keeping track of byte and packet numbers
-	//Prints whenever a packet is 'found' i.e. detects three 0x00 in a row
-	
-	uint8_t buf[5];
-	char strbuf[24];
-	int count = 0;
-	int packet_count = 0;
-	int notch = 0;
-	int read_success = 0;
-	
-	while(1){
-		read_success = dmx.read(buf);
-		if(read_success < 1){
-			buf[0] = 0;
-			buf[1] = 0;
-			buf[2] = 0;
-			buf[3] = 0;
-			buf[4] = 0;
-			continue;
-		}
-		if((buf[0] == 0) && read_success == 1){
-				notch++;
-				pc.write("notch++\n\r");
-		}
-		if(notch > 1){
-				if(buf[0] == 0 && buf[1] == 0 && buf[2] == 0 && buf[3] > 250){
-				sprintf(strbuf,"Packet %d detected at byte %d\n\r", packet_count,count);
-				pc.write(strbuf);
-				count = 0;
-				notch = 0;
-				packet_count++;
-				continue;
-				}
-			}
-		count++;
-	}
+	pc.write("\n\r");
 }
 
 int main()
@@ -303,16 +287,17 @@ int main()
 
 	uint8_t buf[5];
 	char strbuf[32]; //[32]
-	char packet[512];	
-	char charbuf[4] = {0xaa, 0xbb, 0xcc, 0xdd};
 	char cbuf[5];
 	int read_success = 0;
-	int total_packets = 0;
 	uint8_t lsr;
 	uint8_t bi; 
 	uint8_t rbr;
-	
-startup_screen();
+
+	for(int i = 0; i<512; i++){
+		packet[i] = 0;
+	}
+
+	startup_screen();
 
 	while (1)
 	{
@@ -355,8 +340,8 @@ startup_screen();
 				sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
 				pc.write(strbuf);		
 				total_packets++;	
-	}
-}	
+			}
+		}	
 
 		else if(state == 2){
 			keypad_check(myaction);
@@ -365,8 +350,9 @@ startup_screen();
 			shift_line();
 			printstr("Byte number:   ");
 
-			while(state==2){
+			while(state==2 || state==3){ //or state==3 ?
 
+				pc.write("Entering 1st loop...\n\r");
 				clear_display();
 				printstr("DMX Inspector - ");
 				shift_line();
@@ -375,17 +361,33 @@ startup_screen();
 				lsr = LPC_UART1->LSR & 255;
 				bi = lsr & (1<<4);
 
-				while(bi == 0){
+		//		while(state == 2){
+		//			keypad_check(myaction);
+		//		}
+
+				while(bi == 0 || state == 2){ // should be while bi==0 AND no button pushes
 					keypad_check(myaction);
 					lsr = LPC_UART1->LSR & 255;
 					bi = lsr & (1<<4);
 					rbr = LPC_UART1->RBR;
 				}
 				//add keypad_checks() throughout
-				grab_packet(packet);
+				grab_packet();
 				total_packets++;
-				sprintf(strbuf, "Packets: %d\n\r", total_packets);
+				sprintf(strbuf, "Total packets: %d\n\r", total_packets);
 				pc.write(strbuf);
+//				pc.write("Attempting packet write.\n\r");
+//				print_packet();
+//				pc.write("Packet writing done.\n\r");
+				state = 2;
+				//sprintf(strbuf, "Packets: %d\n\r", total_packets);
+				//pc.write(strbuf);
+
+				//Here we should print the first three entire packets
+				//Check they are right manually
+				//Set up trigger condition
+				//Add scrolling functionality				
+
 			}
 		}
 	
