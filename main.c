@@ -27,7 +27,7 @@ void myaction(int button)
 {
 	printchar(labels[button]);
 
-	if(labels[button] == '7'){
+	if(state == 1 && labels[button] == '7'){
 		pc.write("Packet begin...\n\r");
 		packet_begin();
 		state = 255;
@@ -78,6 +78,12 @@ void myaction(int button)
 		if (labels[button] == '#'){
 			state = 3;
 			pc.write("Capturing next packet...\n\r");
+		}
+	}
+
+	if (state == 3){
+		if(labels[button] == 'A'){
+			state = 1;
 		}
 	}
 }
@@ -235,17 +241,20 @@ void grab_packet()
 
 		read_success = dmx.read(buf);
 		//pc.write("Trying read...\n\r");
-		for(int i = 0; i<read_success; i++){
+		if(read_success == 0){ continue;}
+
+		for(int i = 0; i<read_success; i++){	
 			
 			if (packet[j+i] != buf[i]){				//CODE DETECTS CHANGES BETWEEN NEW AND OLD PACKET
-				sprintf(strbuf,"%d- %#2.2x \n\r", j+i, buf[i]);
+//				pc.write("BING!\n\r");
+				sprintf(strbuf,"%d - %#2.2x \n\r", j+i, buf[i]);
 				pc.write(strbuf);
-				strcat(mstrbuf, strbuf);		
+	//			strcat(mstrbuf, strbuf);		
 			}
 //			if(i==0){
 //				sprintf(strbuf,"%d- %d - %#2.2x\n\r", j, read_success, buf[i]);
 //				pc.write(strbuf);
-	//			packet[j] = buf[i];
+	//			packet[j] = buf[i];					//THIS FILLS ENTIRE PACKET
 //			}else{
 //				sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
 //				pc.write(strbuf);
@@ -281,6 +290,23 @@ void print_packet()
 	pc.write("\n\r");
 }
 
+void wait_for_break()
+{
+	uint8_t lsr;
+	uint8_t bi; 
+	uint8_t rbr;
+
+	lsr = LPC_UART1->LSR & 255;
+	bi = lsr & (1<<4);
+
+	while(bi == 0){
+		keypad_check(myaction);
+		lsr = LPC_UART1->LSR & 255;
+		bi = lsr & (1<<4);
+		rbr = LPC_UART1->RBR;
+	}
+}
+
 int main()
 {
 	pc.write("Starting...\n\r");
@@ -289,10 +315,7 @@ int main()
 	char strbuf[32]; //[32]
 	char cbuf[5];
 	int read_success = 0;
-	uint8_t lsr;
-	uint8_t bi; 
-	uint8_t rbr;
-
+	
 	for(int i = 0; i<512; i++){
 		packet[i] = 0;
 	}
@@ -320,16 +343,8 @@ int main()
 
 				pc.write("Loop begin\n\r");				
 
-				lsr = LPC_UART1->LSR & 255;
-				bi = lsr & (1<<4);
+				wait_for_break();	
 			
-				while(bi == 0){
-					keypad_check(myaction);
-					lsr = LPC_UART1->LSR & 255;
-					bi = lsr & (1<<4);
-					rbr = LPC_UART1->RBR;
-				}
-				
 				grab_four_bytes(cbuf);
 	
 				return_home();
@@ -352,34 +367,26 @@ int main()
 
 			while(state==2 || state==3){ //or state==3 ?
 
-				pc.write("Entering 1st loop...\n\r");
+				keypad_check(myaction);
+
 				clear_display();
 				printstr("DMX Inspector - ");
 				shift_line();
 				printstr("Byte number:   ");	
+				
+				wait_for_break();
 
-				lsr = LPC_UART1->LSR & 255;
-				bi = lsr & (1<<4);
-
-		//		while(state == 2){
-		//			keypad_check(myaction);
-		//		}
-
-				while(bi == 0 || state == 2){ // should be while bi==0 AND no button pushes
-					keypad_check(myaction);
-					lsr = LPC_UART1->LSR & 255;
-					bi = lsr & (1<<4);
-					rbr = LPC_UART1->RBR;
-				}
 				//add keypad_checks() throughout
+				
 				grab_packet();
 				total_packets++;
-				sprintf(strbuf, "Total packets: %d\n\r", total_packets);
+				sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
 				pc.write(strbuf);
+
 //				pc.write("Attempting packet write.\n\r");
 //				print_packet();
 //				pc.write("Packet writing done.\n\r");
-				state = 2;
+		//		state = 2;
 				//sprintf(strbuf, "Packets: %d\n\r", total_packets);
 				//pc.write(strbuf);
 
