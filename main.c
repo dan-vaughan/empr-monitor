@@ -38,42 +38,29 @@ void myaction(int button)
 	if (state == 0){
 		if (labels[button] == 'A'){
 			state = 1;
-			clear_display();
-			printstr("Real-time...");
-			shift_line();
+			menu(1);
 			pc.write("Real mode selected.\n\r");
 		}
 
 		if (labels[button] == 'B'){
 			state = 2;	
-			clear_display();
-			printstr("DMX Inspector -");
-			shift_line();
-			pc.write("DMX mode selected.\n\r");
-			printstr("Byte number:   ");
+			menu(2);
 		}
 	}
 	// From state 1 (real) to 2 (packet inspector)
 	if (state == 1){
 		if (labels[button] == 'B'){
 			state = 2;
+			menu(2);
 			pc.write("DMX mode selected.\n\r");
-			return_home();
-			clear_display();
-			printstr("DMX Inspector -");
-			shift_line();
-			printstr("Byte number:   ");
 		}
 	}
 	// From state 2 (packet inspector) to 1 (real-time)	
 	if (state == 2){
 		if (labels[button] == 'A'){
 			state = 1;
+			menu(1);
 			pc.write("Real mode selected.\n\r");
-			return_home();
-			clear_display();
-			printstr("Real-time...");
-			shift_line();
 		}
 		if (labels[button] == '#'){
 			state = 3;
@@ -86,6 +73,35 @@ void myaction(int button)
 			state = 1;
 		}
 	}
+}
+
+void menu(int screen)
+{
+	clear_display();
+	return_home();
+
+	if (screen == 0){
+		setup_display();
+		clear_display();
+		printstr("A: Real-time");
+		shift_line();
+		printstr("B: DMX Inspector");
+		return_home();
+	}
+	
+	if (screen == 1){
+		clear_display();
+		printstr("Real-time...");
+		shift_line();
+	}
+	
+	if (screen == 2){
+		clear_display();
+		printstr("DMX Inspector -");
+		shift_line();
+		printstr("Byte number:   ");
+	}
+
 }
 
 void UART1_IRQHandler(void)
@@ -113,34 +129,7 @@ void startup_screen()
 	printstr("B: DMX Inspector");
 	return_home();
 }
-/*
-void print_packet(char* packet)
-{	
-	char str_buf[20];
 
-	for(int i=0;i<512;i++){
-		sprintf(str_buf, "Slot %d: %#2.2X\n\r", i+1, packet[i]);
-		pc.write(str_buf);
-	}	
-}
-
-void print_buflen(int n)
-{
-	//Test function 
-	//Prints the next n bytes received
-
-	uint8_t buf[n];
-	uint32_t success;
-	char strbuf[18];
-		success = dmx.read(buf);
-		for (int i =0; i<n;i++){ 
-		sprintf(strbuf,"success: %d - %d\n\r", success, buf[i]);	
-		pc.write(strbuf);
-		}
-
-
-};
-*/
 void packet_begin()
 {
 	//Reads and prints the first 20 bytes.
@@ -196,8 +185,8 @@ void grab_four_bytes(char* cbuf)
 	int j=0;
 	while(1){
 
-		if(count>6){
-			pc.write("Terminating...\n\r");
+		if(count>5){
+			//pc.write("Terminating...\n\r");
 			return;
 		}
 
@@ -205,12 +194,12 @@ void grab_four_bytes(char* cbuf)
 
 		for(int i = 0; i<read_success; i++){
 			if(i==0){
-				sprintf(strbuf,"%d - %#2.2x\n\r",read_success, buf[i]);
-				pc.write(strbuf);
+			//	sprintf(strbuf,"%d - %#2.2x\n\r",read_success, buf[i]);
+			//	pc.write(strbuf);
 				cbuf[j] = buf[i];
 			}else{
-				sprintf(strbuf,"  - %#2.2x\n\r",buf[i]);
-				pc.write(strbuf);
+			//	sprintf(strbuf,"  - %#2.2x\n\r",buf[i]);
+			//	pc.write(strbuf);
 				cbuf[j] = buf[i];
 			}
 			j++;
@@ -235,7 +224,6 @@ void grab_packet()
 
 		if(count>507){
 			pc.write("\n\rTerminating...\n\r");
-//			pc.write(mstrbuf);
 			return;
 		}
 
@@ -245,16 +233,15 @@ void grab_packet()
 
 		for(int i = 0; i<read_success; i++){	
 			
-			if (packet[j+i] != buf[i]){				//CODE DETECTS CHANGES BETWEEN NEW AND OLD PACKET
-//				pc.write("BING!\n\r");
-				sprintf(strbuf,"%d - %#2.2x \n\r", j+i, buf[i]);
-				pc.write(strbuf);
-	//			strcat(mstrbuf, strbuf);		
-			}
+//			if (packet[j+i] != buf[i]){				//CODE DETECTS CHANGES BETWEEN NEW AND OLD PACKET
+//				sprintf(strbuf,"%d - %#2.2x \n\r", j+i, buf[i]);
+//				pc.write(strbuf);
+//			}
+
 //			if(i==0){
 //				sprintf(strbuf,"%d- %d - %#2.2x\n\r", j, read_success, buf[i]);
 //				pc.write(strbuf);
-	//			packet[j] = buf[i];					//THIS FILLS ENTIRE PACKET
+				packet[j] = buf[i];					//THIS FILLS ENTIRE PACKET
 //			}else{
 //				sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
 //				pc.write(strbuf);
@@ -320,7 +307,9 @@ int main()
 		packet[i] = 0;
 	}
 
-	startup_screen();
+//	startup_screen();
+
+	menu(0);
 
 	while (1)
 	{
@@ -338,44 +327,47 @@ int main()
 			return_home();
 			clear_display();
 			printstr("Real-time:");	
-
+			
+	
 			while (state == 1){
 
-				pc.write("Loop begin\n\r");				
-
+//				pc.write("Loop begin\n\r");				
+				return_home();
+				shift_line();		
 				wait_for_break();	
 			
 				grab_four_bytes(cbuf);
 	
-				return_home();
-				shift_line();			
 				sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
 				//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
 				printstr(strbuf);
-				sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
-				pc.write(strbuf);		
+			//	sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
+			//	pc.write(strbuf);		
 				total_packets++;	
 			}
 		}	
 
 		else if(state == 2){
+			//menu(2);		
 			keypad_check(myaction);
-			clear_display();
-			printstr("DMX Inspector -");
-			shift_line();
-			printstr("Byte number:   ");
-
 			while(state==2 || state==3){ //or state==3 ?
 
 				keypad_check(myaction);
 
-				clear_display();
-				printstr("DMX Inspector - ");
-				shift_line();
-				printstr("Byte number:   ");	
-				
+				menu(2);
+	
 				wait_for_break();
 
+				while(state == 2){
+					keypad_check(myaction);
+				}
+				
+				if (state ==1){
+					break;
+				}
+
+				state = 2;
+				keypad_check(myaction);
 				//add keypad_checks() throughout
 				
 				grab_packet();
@@ -383,18 +375,7 @@ int main()
 				sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
 				pc.write(strbuf);
 
-//				pc.write("Attempting packet write.\n\r");
-//				print_packet();
-//				pc.write("Packet writing done.\n\r");
-		//		state = 2;
-				//sprintf(strbuf, "Packets: %d\n\r", total_packets);
-				//pc.write(strbuf);
-
-				//Here we should print the first three entire packets
-				//Check they are right manually
-				//Set up trigger condition
-				//Add scrolling functionality				
-
+				print_packet();
 			}
 		}
 	
