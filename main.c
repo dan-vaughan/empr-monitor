@@ -18,6 +18,8 @@ DMX dmx;
 int state = 0;
 int interrupt = 0;
 int total_packets = 0;
+int inputlen = 0;
+
 
 char packet[512];	
 
@@ -25,7 +27,7 @@ void packet_begin();
 
 void myaction(int button)
 {
-	printchar(labels[button]);
+	//printchar(labels[button]);
 
 	if(state == 1 && labels[button] == '7'){
 		pc.write("Packet begin...\n\r");
@@ -45,11 +47,12 @@ void myaction(int button)
 		if (labels[button] == 'B'){
 			state = 2;	
 			menu(2);
+			pc.write("DMX mode selected.\n\r");
 		}
 	}
 	// From state 1 (real) to 2 (packet inspector)
 	if (state == 1){
-		if (labels[button] == 'B'){
+		if ((labels[button] == 'B') || (labels[button] == 'C') || (labels[button] == 'D')){
 			state = 2;
 			menu(2);
 			pc.write("DMX mode selected.\n\r");
@@ -62,17 +65,62 @@ void myaction(int button)
 			menu(1);
 			pc.write("Real mode selected.\n\r");
 		}
-		if (labels[button] == '#'){
+
+		if (labels[button] == 'C'){
 			state = 3;
+			menu(3);
 			pc.write("Capturing next packet...\n\r");
+		}
+		
+		if (labels[button] == 'D'){
+			state = 5;
+			menu(5);
+			pc.write("Trigger mode selected.\n\r");
 		}
 	}
 
 	if (state == 3){
 		if(labels[button] == 'A'){
 			state = 1;
+			menu(1);
+		}
+		
+		if(labels[button] == 'B'){
+			state = 2;
+			menu(2);
+		}
+		
+		if(labels[button] == 'D'){
+			state = 5;
+			menu(5);
 		}
 	}
+
+	if (state == 4){
+
+		printchar(labels[button]);
+
+		inputlen++;	
+	
+		if(labels[button] == 'A'){
+			state = 1;
+			menu(1);
+		}
+		
+		if(labels[button] == 'B'){
+			state = 2;
+			menu(2);
+		}
+		
+		if((labels[button] == 'C') || (labels[button] == 'D')){
+			state = 2;
+			menu(2);
+		}
+
+	
+	}
+
+
 }
 
 void menu(int screen)
@@ -91,17 +139,38 @@ void menu(int screen)
 	
 	if (screen == 1){
 		clear_display();
-		printstr("Real-time...");
+		printstr("Real-time:    B");
+		putcustom(0x20);
 		shift_line();
 	}
 	
 	if (screen == 2){
 		clear_display();
-		printstr("DMX Inspector -");
+		return_home();
+		printstr("C: Capture Next");
 		shift_line();
-		printstr("Byte number:   ");
+		printstr("D: Set Trigger");
 	}
 
+	if (screen == 3){
+		clear_display();
+		return_home();
+		printstr("Capturing Packet...");
+	}
+
+	if (screen == 4){
+		clear_display();
+		return_home();
+		printstr("Select Slot:");
+
+	}
+
+	if (screen == 5){
+		clear_display();
+		return_home();
+		printstr("Trigger...");
+
+	}
 }
 
 void UART1_IRQHandler(void)
@@ -324,12 +393,15 @@ int main()
 			keypad_check(myaction);
 		}
 		else if(state == 1){
-			return_home();
-			clear_display();
-			printstr("Real-time:");	
+			//return_home();
+			//clear_display();
+			//printstr("Real-time:");	
 			
 	
 			while (state == 1){
+
+				//ADD A PAUSE FUNCTIONALITY
+
 
 //				pc.write("Loop begin\n\r");				
 				return_home();
@@ -346,37 +418,56 @@ int main()
 				total_packets++;	
 			}
 		}	
-
-		else if(state == 2){
-			//menu(2);		
-			keypad_check(myaction);
-			while(state==2 || state==3){ //or state==3 ?
-
-				keypad_check(myaction);
-
-				menu(2);
 	
-				wait_for_break();
+		if(state == 2){
+			keypad_check(myaction);
+		}
+	//	else if(state == 2){
+			//menu(2);		
+	//		keypad_check(myaction);
+			//while(state==2 || state==3){ //or state==3 ?
 
-				while(state == 2){
-					keypad_check(myaction);
-				}
+			//	keypad_check(myaction);
+
+				//menu(2);
+	
+				//wait_for_break();
+
+			//	while(state == 2){
+			//		keypad_check(myaction);
+			//	}
 				
-				if (state ==1){
-					break;
-				}
+	//			if (state ==1){
+	//				break;
+	//			}
 
-				state = 2;
-				keypad_check(myaction);
+			//	state = 2;
+			//	keypad_check(myaction);
 				//add keypad_checks() throughout
 				
-				grab_packet();
-				total_packets++;
-				sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
-				pc.write(strbuf);
+			//	grab_packet();
+			//	total_packets++;
+			//	sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
+			//	pc.write(strbuf);
+//
+//				print_packet();
+		//	}
+	//	}
+	
+		else if(state == 3){
+			
+			wait_for_break();
+			grab_packet();
+			total_packets++;
+			sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
+			pc.write(strbuf);
+			print_packet();	
+			state = 4;
+			menu(4);
+		}
 
-				print_packet();
-			}
+		else if(state == 4){
+			keypad_check(myaction);	
 		}
 	
 		else if(state == 255){
