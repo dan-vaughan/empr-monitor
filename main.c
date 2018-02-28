@@ -52,6 +52,7 @@ void myaction(int button)
 			pc.write("DMX mode selected.\n\r");
 		}
 	}
+	
 	// From state 1 (real) to 2 (packet inspector)
 	if (state == 1){
 		if ((labels[button] == 'B') || (labels[button] == 'C') || (labels[button] == 'D')){
@@ -59,7 +60,22 @@ void myaction(int button)
 			menu(2);
 			pc.write("DMX mode selected.\n\r");
 		}
+
+		if(labels[button] == '0'){
+			state = 99;
+			menu(99);
+			pc.write("Real mode paused.\n\r");
+		}
 	}
+	
+	else if (state == 99){
+		if (labels[button] == '0'){
+			state = 1;
+			menu(1);
+		}
+	}
+
+
 	// From state 2 (packet inspector) to 1 (real-time)	
 	if (state == 2){
 		if (labels[button] == 'A'){
@@ -136,17 +152,11 @@ void myaction(int button)
 			state = 2;
 			menu(2);
 		}
-
-	
 	}
-
-
 }
 
 void menu(int screen)
 {
-	clear_display();
-	return_home();
 
 	if (screen == 0){
 		setup_display();
@@ -159,22 +169,30 @@ void menu(int screen)
 	
 	if (screen == 1){
 		clear_display();
+		return_home();
 		printstr("Real-time:    B");
 		putcustom(0x20);
 		shift_line();
 	}
+
+	if (screen == 99){
+		return_home();
+		printstr("Real-time: !! B");
+		putcustom(0x20);
+	}
 	
 	if (screen == 2){
 		clear_display();
-		return_home();
+		return_home();				//FIGURE OUT WHICH WAY ROUND YOU NEED THESE
+		clear_display();
 		printstr("C: Capture Next");
 		shift_line();
 		printstr("D: Set Trigger");
 	}
 
 	if (screen == 3){
-		clear_display();
 		return_home();
+		clear_display();
 		printstr("Capturing...");
 	}
 
@@ -422,84 +440,48 @@ int main()
 
 		//We should only use data that has successfully read.
 
-
+		sprintf(strbuf,"%d\n\r", state);
+		pc.write(strbuf);
 	
 		if(state == 0){
 			keypad_check(myaction);
 		}
 		else if(state == 1){
-			//return_home();
-			//clear_display();
-			//printstr("Real-time:");	
-			cbuf = {9,9,9,9,9};			
-			strbuf[0] = '\0';
-
 	
 			while (state == 1){
 
 				//ADD A PAUSE FUNCTIONALITY
-				pc.write("--\n\r");
-
-//				pc.write("Loop begin\n\r");				
+				keypad_check(myaction);
 				return_home();
 				shift_line();		
 				wait_for_break();	
-				pc.write("-1\n\r");
 				grab_four_bytes(cbuf);
 	
 			//	sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
 				for(int i=1; i<5;i++){
 					sprintf(strbuf, "%3d ",cbuf[i]);
-					pc.write(strbuf);
+				//	pc.write(strbuf);
 					printstr(strbuf);
 				}
 
 					//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
-				pc.write("-3\n\r");
-				printstr(strbuf);
+				//printstr(strbuf);
 			//	sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
 			//	pc.write(strbuf);		
 				total_packets++;	
 				keypad_check(myaction);
 			}
 		}	
-	
+
 		if(state == 2){
 			keypad_check(myaction);
 		}
-	//	else if(state == 2){
-			//menu(2);		
-	//		keypad_check(myaction);
-			//while(state==2 || state==3){ //or state==3 ?
 
-			//	keypad_check(myaction);
-
-				//menu(2);
+		while(state == 99){
+			keypad_check(myaction);
+		}
 	
-				//wait_for_break();
-
-			//	while(state == 2){
-			//		keypad_check(myaction);
-			//	}
-				
-	//			if (state ==1){
-	//				break;
-	//			}
-
-			//	state = 2;
-			//	keypad_check(myaction);
-				//add keypad_checks() throughout
-				
-			//	grab_packet();
-			//	total_packets++;
-			//	sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
-			//	pc.write(strbuf);
-//
-//				print_packet();
-		//	}
-	//	}
-	
-		else if(state == 3){
+		if(state == 3){
 			
 			wait_for_break();
 			grab_packet();
