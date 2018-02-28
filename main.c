@@ -18,12 +18,14 @@ DMX dmx;
 int state = 0;
 int interrupt = 0;
 int total_packets = 0;
-int inputlen = 0;
-
+//int inputlen = 0;
+int packet_index = 0;
 
 char packet[512];	
 
 void packet_begin();
+void packet_viewer(int action);
+
 
 void myaction(int button)
 {
@@ -98,10 +100,28 @@ void myaction(int button)
 
 	if (state == 4){
 
-		printchar(labels[button]);
+	//	printchar(labels[button]);
 
-		inputlen++;	
-	
+	//	inputlen++;	
+		
+		if(labels[button] == '*'){
+
+			if((packet_index - 4) < 0){
+				packet_index = 512 - packet_index - 4;
+			}
+		else{
+				packet_index = (packet_index - 4) % 512;	
+			}
+			menu(4);
+			packet_viewer(1);
+		}	
+
+		if(labels[button] == '#'){
+			packet_index = (packet_index + 4) % 512;
+			menu(4);
+			packet_viewer(2);
+		}
+
 		if(labels[button] == 'A'){
 			state = 1;
 			menu(1);
@@ -155,15 +175,13 @@ void menu(int screen)
 	if (screen == 3){
 		clear_display();
 		return_home();
-		printstr("Capturing Packet...");
+		printstr("Capturing...");
 	}
 
 	if (screen == 4){
 		clear_display();
 		return_home();
-		printstr("Select Slot:");
-
-	}
+}
 
 	if (screen == 5){
 		clear_display();
@@ -171,6 +189,25 @@ void menu(int screen)
 		printstr("Trigger...");
 
 	}
+}
+
+void packet_viewer(int action)
+{
+		/*
+		 	< 0x10 | ^ 0x12 | > 0x20 
+		*/
+	
+		char strbuf[18];
+
+		putcustom(0x10);
+		//printstr(" 0 - 1 - 2 - 3");
+		sprintf(strbuf, "%03d--x--x--%03d", packet_index,  packet_index+3); 
+		printstr(strbuf);
+		putcustom(0x20);
+		shift_line();						//BELOW LINE contains a bodge (adding extra 1 to index to mitigate off by one)	
+		sprintf(strbuf,"  %2x %2x %2x  %2x", packet[packet_index+1], packet[packet_index+2], packet[packet_index+3], packet[packet_index+4]);
+		//sprintf(strbuf," ff  ff  ff  ff");
+		printstr(strbuf);
 }
 
 void UART1_IRQHandler(void)
@@ -253,14 +290,11 @@ void grab_four_bytes(char* cbuf)
 	char strbuf[10];
 	int j=0;
 	while(1){
-
 		if(count>5){
 			//pc.write("Terminating...\n\r");
 			return;
 		}
-
 		read_success = dmx.read(buf);
-
 		for(int i = 0; i<read_success; i++){
 			if(i==0){
 			//	sprintf(strbuf,"%d - %#2.2x\n\r",read_success, buf[i]);
@@ -291,7 +325,7 @@ void grab_packet()
 
 	while(1){
 
-		if(count>507){
+		if(count>512){
 			pc.write("\n\rTerminating...\n\r");
 			return;
 		}
@@ -388,7 +422,8 @@ int main()
 
 		//We should only use data that has successfully read.
 
-		
+
+	
 		if(state == 0){
 			keypad_check(myaction);
 		}
@@ -396,26 +431,36 @@ int main()
 			//return_home();
 			//clear_display();
 			//printstr("Real-time:");	
-			
+			cbuf = {9,9,9,9,9};			
+			strbuf[0] = '\0';
+
 	
 			while (state == 1){
 
 				//ADD A PAUSE FUNCTIONALITY
-
+				pc.write("--\n\r");
 
 //				pc.write("Loop begin\n\r");				
 				return_home();
 				shift_line();		
 				wait_for_break();	
-			
+				pc.write("-1\n\r");
 				grab_four_bytes(cbuf);
 	
-				sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
-				//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
+			//	sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
+				for(int i=1; i<5;i++){
+					sprintf(strbuf, "%3d ",cbuf[i]);
+					pc.write(strbuf);
+					printstr(strbuf);
+				}
+
+					//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
+				pc.write("-3\n\r");
 				printstr(strbuf);
 			//	sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
 			//	pc.write(strbuf);		
 				total_packets++;	
+				keypad_check(myaction);
 			}
 		}	
 	
@@ -463,11 +508,16 @@ int main()
 			pc.write(strbuf);
 			print_packet();	
 			state = 4;
+			packet_index = 0;
 			menu(4);
+			packet_viewer(0);
 		}
 
 		else if(state == 4){
-			keypad_check(myaction);	
+			while(state == 4){
+				keypad_check(myaction);
+			}
+			
 		}
 	
 		else if(state == 255){
