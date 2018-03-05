@@ -23,6 +23,8 @@ int packet_index = 0;
 
 char packet[512];	
 
+char break_code[3] = {0x42,0x84,0xc6};
+
 void packet_begin();
 void packet_viewer(int action);
 
@@ -32,7 +34,7 @@ void myaction(int button)
 	//printchar(labels[button]);
 
 	if(state == 1 && labels[button] == '7'){
-		pc.write("Packet begin...\n\r");
+		//pc.write("Packet begin...\n\r");
 		packet_begin();
 		state = 255;
 		return;
@@ -43,13 +45,13 @@ void myaction(int button)
 		if (labels[button] == 'A'){
 			state = 1;
 			menu(1);
-			pc.write("Real mode selected.\n\r");
+		//	pc.write("Real mode selected.\n\r");
 		}
 
 		if (labels[button] == 'B'){
 			state = 2;	
 			menu(2);
-			pc.write("DMX mode selected.\n\r");
+		//	pc.write("DMX mode selected.\n\r");
 		}
 	}
 	
@@ -58,13 +60,13 @@ void myaction(int button)
 		if ((labels[button] == 'B') || (labels[button] == 'C') || (labels[button] == 'D')){
 			state = 2;
 			menu(2);
-			pc.write("DMX mode selected.\n\r");
+		//	pc.write("DMX mode selected.\n\r");
 		}
 
 		if(labels[button] == '0'){
 			state = 99;
 			menu(99);
-			pc.write("Real mode paused.\n\r");
+		//	pc.write("Real mode paused.\n\r");
 		}
 	}
 	
@@ -81,19 +83,19 @@ void myaction(int button)
 		if (labels[button] == 'A'){
 			state = 1;
 			menu(1);
-			pc.write("Real mode selected.\n\r");
+		//	pc.write("Real mode selected.\n\r");
 		}
 
 		if (labels[button] == 'C'){
 			state = 3;
 			menu(3);
-			pc.write("Capturing next packet...\n\r");
+		//	pc.write("Capturing next packet...\n\r");
 		}
 		
 		if (labels[button] == 'D'){
 			state = 5;
 			menu(5);
-			pc.write("Trigger mode selected.\n\r");
+		//	pc.write("Trigger mode selected.\n\r");
 		}
 	}
 
@@ -269,7 +271,7 @@ void packet_begin()
 	while(1){
 
 		if(count>20){
-			pc.write("Terminating...\n\r");
+		//	pc.write("Terminating...\n\r");
 			return;
 		}
 
@@ -287,10 +289,10 @@ void packet_begin()
 		for(int i = 0; i<read_success; i++){
 			if(i==0){
 				sprintf(strbuf,"%d - %#2.2x\n\r",read_success, cbuf[i]);
-				pc.write(strbuf);
+		//		pc.write(strbuf);
 			}else{
 				sprintf(strbuf,"  - %#2.2x\n\r",cbuf[i]);
-				pc.write(strbuf);
+		//		pc.write(strbuf);
 			}
 			count++;
 		}
@@ -329,7 +331,31 @@ void grab_four_bytes(char* cbuf)
 	}
 }
 
+void new_grab()
+{
+	int count = 0;
+	int read_success;
+	uint8_t buf[5]; 
+	char strbuf[40];
+	char mstrbuf[512];
+	int j=0;
 
+		
+		UART_Receive((LPC_UART_TypeDef *)LPC_UART1,(uint8_t*)packet,512, NONE_BLOCKING);
+		UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)packet,512,NONE_BLOCKING);
+
+/*	for(int i=0; i<16; i++){
+		for (int j=0; j<32;j++){
+			sprintf(strbuf, "%2.2x",packet[((i*16)+j)]);
+			//strcat(strbuf, strbuf2);
+		//	packet[(i*16)+j] = mstrbuf[(i*16)+j];
+			pc.write(strbuf);
+		}	//	pc.write(mstrbuf);
+}
+*/
+	//	pc.write(packet);
+	//	pc.write("\n\r\n\r");	
+}
 void grab_packet()
 {
 	//Reads and writes the next 512 bytes into packet char array
@@ -344,7 +370,8 @@ void grab_packet()
 	while(1){
 
 		if(count>512){
-			pc.write("\n\rTerminating...\n\r");
+		//	pc.write("\n\rTerminating...\n\r");
+			pc.write("\n\r\n\r");
 			return;
 		}
 
@@ -352,6 +379,9 @@ void grab_packet()
 		//pc.write("Trying read...\n\r");
 		if(read_success == 0){ continue;}
 
+		UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)buf,read_success,NONE_BLOCKING);
+//		pc.write((char*)buf);
+		
 		for(int i = 0; i<read_success; i++){	
 			
 //			if (packet[j+i] != buf[i]){				//CODE DETECTS CHANGES BETWEEN NEW AND OLD PACKET
@@ -364,7 +394,8 @@ void grab_packet()
 //				pc.write(strbuf);
 				packet[j] = buf[i];					//THIS FILLS ENTIRE PACKET
 //			}else{
-//				sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
+	//			sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
+//				sprintf(strbuf,"%2.2x",buf[i]);
 //				pc.write(strbuf);
 //				packet[j] = buf[i]; 
 //			}
@@ -384,18 +415,19 @@ void print_packet()
 	strbuf[0] = '\0';
 	strbuf2[0] = '\0';
 
-	sprintf(message,"Packet no. %d:\n\r\n\r", total_packets);
-	pc.write(message);
+//	sprintf(message,"Packet no. %d:\n\r\n\r", total_packets);
+//	pc.write(message);
 
 	for(int i=0; i<16; i++){
 		for (int j=0; j<32;j++){
-			sprintf(strbuf2, "%2.2x-",packet[((i*16)+j)]);
-			strcat(strbuf, strbuf2);
+			//sprintf(strbuf2, "%2.2x",packet[((i*16)+j)]);
+			//strcat(strbuf, strbuf2);
+	//		pc.write(packet[(i*16)+j]);
 		}
-		pc.write(strbuf);
-		strbuf[0] = '\0';
+	//	pc.write(strbuf);
+	//	strbuf[0] = '\0';
 	}
-	pc.write("\n\r");
+//	pc.write("\n\r");
 }
 
 void wait_for_break()
@@ -417,18 +449,16 @@ void wait_for_break()
 
 int main()
 {
-	pc.write("Starting...\n\r");
+//	pc.write("Starting...\n\r");
 
 	uint8_t buf[5];
-	char strbuf[32]; //[32]
+	char strbuf[32];
 	char cbuf[5];
 	int read_success = 0;
 	
 	for(int i = 0; i<512; i++){
 		packet[i] = 0;
 	}
-
-//	startup_screen();
 
 	menu(0);
 
@@ -440,8 +470,8 @@ int main()
 
 		//We should only use data that has successfully read.
 
-		sprintf(strbuf,"%d\n\r", state);
-		pc.write(strbuf);
+//		sprintf(strbuf,"%d\n\r", state);
+//		pc.write(strbuf);
 	
 		if(state == 0){
 			keypad_check(myaction);
@@ -450,19 +480,28 @@ int main()
 	
 			while (state == 1){
 
+				char newline[2] = {'\n','\r'};
+
 				//ADD A PAUSE FUNCTIONALITY
 				keypad_check(myaction);
 				return_home();
 				shift_line();		
 				wait_for_break();	
-				grab_four_bytes(cbuf);
+//				new_grab();
+				grab_packet();
+		//		pc.write(newline);
+				pc.write(break_code);
+	//			grab_four_bytes(cbuf);
+//				pc.write(packet);
 	
 			//	sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
 				for(int i=1; i<5;i++){
-					sprintf(strbuf, "%3d ",cbuf[i]);
+					sprintf(strbuf, "%3d ",packet[i]);
 				//	pc.write(strbuf);
 					printstr(strbuf);
 				}
+			//	char temp[9] = {0xaa, 0xbb, 0xcc, 0xaa, 0xbb, 0xcc, 0xaa, 0xbb, 0xcc};
+
 
 					//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
 				//printstr(strbuf);
@@ -484,11 +523,13 @@ int main()
 		if(state == 3){
 			
 			wait_for_break();
+			pc.write(break_code);
 			grab_packet();
+			pc.write(packet);
 			total_packets++;
-			sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
-			pc.write(strbuf);
-			print_packet();	
+		//	sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
+		//	pc.write(strbuf);
+		//	print_packet();	
 			state = 4;
 			packet_index = 0;
 			menu(4);
@@ -499,7 +540,6 @@ int main()
 			while(state == 4){
 				keypad_check(myaction);
 			}
-			
 		}
 	
 		else if(state == 255){
