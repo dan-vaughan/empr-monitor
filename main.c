@@ -20,6 +20,7 @@ int interrupt = 0;
 int total_packets = 0;
 //int inputlen = 0;
 int packet_index = 0;
+int triggermod = 0;
 
 char packet[512];	
 
@@ -366,22 +367,24 @@ void grab_packet()
 	char strbuf[10];
 	char mstrbuf[512];
 	int j=0;
-
+    int total = 0;
 	while(1){
 
-		if(count>512){
+		if(j>512){
 		//	pc.write("\n\rTerminating...\n\r");
-			pc.write("\n\r\n\r");
+			//pc.write("\n\r\n\r");
 			return;
 		}
 
 		read_success = dmx.read(buf);
-		//pc.write("Trying read...\n\r");
 		if(read_success == 0){ continue;}
-
-		UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)buf,read_success,NONE_BLOCKING);
+        
+        //if (j<128){
+//		    UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)buf,read_success,NONE_BLOCKING);
+       
+        // }
 //		pc.write((char*)buf);
-		
+
 		for(int i = 0; i<read_success; i++){	
 			
 //			if (packet[j+i] != buf[i]){				//CODE DETECTS CHANGES BETWEEN NEW AND OLD PACKET
@@ -395,13 +398,16 @@ void grab_packet()
 				packet[j] = buf[i];					//THIS FILLS ENTIRE PACKET
 //			}else{
 	//			sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
+
 //				sprintf(strbuf,"%2.2x",buf[i]);
 //				pc.write(strbuf);
 //				packet[j] = buf[i]; 
 //			}
 		}
-			j++;
-			count++;
+		//		sprintf(strbuf,"%2.2x",buf);
+		//		pc.write(strbuf);
+
+			j += read_success;
 	}
 }
 
@@ -412,16 +418,17 @@ void print_packet()
 	char strbuf2[5];	
 	char message[20];
 
-	strbuf[0] = '\0';
-	strbuf2[0] = '\0';
+//	strbuf[0] = '\0';
+//	strbuf2[0] = '\0';
 
 //	sprintf(message,"Packet no. %d:\n\r\n\r", total_packets);
 //	pc.write(message);
 
 	for(int i=0; i<16; i++){
 		for (int j=0; j<32;j++){
-			//sprintf(strbuf2, "%2.2x",packet[((i*16)+j)]);
-			//strcat(strbuf, strbuf2);
+			sprintf(strbuf2, "%2.2x",packet[((i*16)+j)]);
+			pc.write(strbuf2);
+            //strcat(strbuf, strbuf2);
 	//		pc.write(packet[(i*16)+j]);
 		}
 	//	pc.write(strbuf);
@@ -452,7 +459,8 @@ int main()
 //	pc.write("Starting...\n\r");
 
 	uint8_t buf[5];
-	char strbuf[32];
+	char strbuf[80];
+    char strbuf2[10];
 	char cbuf[5];
 	int read_success = 0;
 	
@@ -488,21 +496,43 @@ int main()
 				shift_line();		
 				wait_for_break();	
 //				new_grab();
+				//pc.write(break_code);
 				grab_packet();
-		//		pc.write(newline);
-				pc.write(break_code);
+               // print_packet();
+	            triggermod++;
+    	//		pc.write(newline);
 	//			grab_four_bytes(cbuf);
 //				pc.write(packet);
-	
-			//	sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
+                //UART_Receive((LPC_UART_TypeDef *)LPC_UART1,(uint8_t*)packet,512, NONE_BLOCKING);
+                			//	sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
 				for(int i=1; i<5;i++){
 					sprintf(strbuf, "%3d ",packet[i]);
 				//	pc.write(strbuf);
 					printstr(strbuf);
 				}
 			//	char temp[9] = {0xaa, 0xbb, 0xcc, 0xaa, 0xbb, 0xcc, 0xaa, 0xbb, 0xcc};
-
-
+               // if (triggermod > 3){
+                 //   triggermod = 0;	
+                   // UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet, 18, BLOCKING);
+                    strbuf[0] = '\0';
+                    for(int k = 0; k<18; k++){
+                        sprintf(strbuf2,"%d-",packet[k]);
+                        strcat(strbuf, strbuf2);
+                    }
+                    strcat(strbuf, newline);
+                    pc.write(strbuf); 
+ //                   print_packet();
+                    //for (int k=0; k<7; k++){
+                    //UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet[k*64], 64, NONE_BLOCKING);
+                   // }
+    		        //UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)packet,512,NONE_BLOCKING);
+                    //print_packet();   
+                   // }
+//                    pc.write(packet);
+ 
+                pc.write(newline);
+                strbuf[0] = '\0';
+                strbuf2[0] = '\0';
 					//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
 				//printstr(strbuf);
 			//	sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
