@@ -18,9 +18,9 @@ DMX dmx;
 int state = 0;
 int interrupt = 0;
 int total_packets = 0;
-//int inputlen = 0;
 int packet_index = 0;
 int triggermod = 0;
+int trigger_slot = 0;
 
 char packet[512];	
 
@@ -28,7 +28,7 @@ char break_code[3] = {0x42,0x84,0xc6};
 
 void packet_begin();
 void packet_viewer(int action);
-
+void wait_for_break();
 
 void myaction(int button)
 {
@@ -97,6 +97,16 @@ void myaction(int button)
 		//	pc.write("Trigger mode selected.\n\r");
 		}
 	}
+    if (state == 5){
+        if (labels[button] == 'A'){
+            //Capture three digit number here, set it to trigger_slot
+            menu(6);
+        }
+        if (labels[button] == 'B'){
+            state = 6;
+            menu(7);
+        }
+    }
 
 	if (state == 3){
 		if(labels[button] == 'A'){
@@ -210,9 +220,23 @@ void menu(int screen)
 	if (screen == 5){
 		clear_display();
 		return_home();
-		printstr("Trigger...");
+		printstr("A: Set Trigger");
+        shift_line();
+        printstr("B: Capture");
 	}
+
+    if (screen == 6){
+        clear_display();
+        return_home();
+        printstr("Slot:");
+    }
     
+    if (screen == 7){
+        clear_display();
+        return_home();
+        printstr("Waiting...");
+    }
+
     if (screen == 8){
         clear_display();
         return_home();
@@ -403,7 +427,7 @@ void grab_packet()
 //			if(i==0){
 //				sprintf(strbuf,"%d- %d - %#2.2x\n\r", j, read_success, buf[i]);
 //				pc.write(strbuf);
-				packet[j] = buf[i];					//THIS FILLS ENTIRE PACKET
+				packet[j+i] = buf[i];					//THIS FILLS ENTIRE PACKET
 //			}else{
 	//			sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
 
@@ -418,6 +442,51 @@ void grab_packet()
 			j += read_success;
 	}
 }
+
+void capture_packet_trigger()
+{
+	//Reads and writes the next 512 bytes into packet char array
+
+	int read_success;
+	uint8_t buf[5]; 
+    char temp_packet[512];
+	int j=0;
+    int found = 0;
+
+	while(1){
+
+        if(found == 1){
+            for(int i = 0; i<512; i++){
+                    packet[i] = temp_packet[i];
+                }
+
+            return;
+        }
+
+        wait_for_break();
+
+        while(1){
+
+    		if(j>511){
+                if(temp_packet[trigger_slot] != packet[trigger_slot]){
+                    found = 1;
+                }
+                j = 0;
+	    	    break;
+            }
+
+    		read_success = dmx.read(buf);
+	    	if(read_success == 0){ continue;}
+        
+		    for(int i = 0; i<read_success; i++){	
+				temp_packet[j+i] = buf[i];
+		}
+			j += read_success;
+	    }
+    }
+}
+
+
 
 void print_packet()
 {
@@ -482,20 +551,22 @@ int main()
 	while (1)
 	{
 		
-		//Note: if dmx.read() does not read anything, it will return 0.
-		//But it won't write 0 to the buffer. It will just be junk.
-
-		//We should only use data that has successfully read.
-
 //		sprintf(strbuf,"state: %d\n\r", state);
 //		pc.write(strbuf);
 	
 		if(state == 0){
+        
+            //Startup state
+
 			keypad_check(myaction);
 		}
+
 		else if(state == 1){
 	
 			while (state == 1){
+
+                //Realtime mode, captures prints first 4 bytes of packet to LCD.
+                //Also is where I put code to test other stuff.
 
 				keypad_check(myaction);
 				return_home();
@@ -528,17 +599,6 @@ int main()
 
                  //   pc.write(packet);
                 //    pc.write(strbuf); 
-
-/* FOR MY GUI IC               
-                     strbuf[0] = '\0';
-                    for(int k = 0; k<18; k++){
-                        sprintf(strbuf2,"%d-",packet[k]);
-                        strcat(strbuf, strbuf2);
-                    }
-                    strcat(strbuf, newline);
-                    pc.write(strbuf); 
-*/
-
  //                   print_packet();
                     //for (int k=0; k<7; k++){
                     //UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet[k*64], 64, NONE_BLOCKING);
@@ -561,15 +621,23 @@ int main()
 		}	
 
 		if(state == 2){
+
+            //Menu state
+
 			keypad_check(myaction);
 		}
 
 		while(state == 99){
+
+            //Pause state for realtime mode
+
 			keypad_check(myaction);
 		}
 	
 		if(state == 3){
-			
+		
+            //Capture full packet state, transitions to packet viewer (state 4)
+	
 			wait_for_break();
 			pc.write(break_code);
 			grab_packet();
@@ -584,14 +652,27 @@ int main()
 			packet_viewer(0);
 		}
 
-		else if(state == 4){
+		if(state == 4){
+
+            //Packet Inspector state
+
 			while(state == 4){
 				keypad_check(myaction);
 			}
 		}
 	
+        if(state == 6){
+
+            //Waiting for packet change in trigger slot state
+            
+            capture_packet_trigger();
+            state = 4;
+            packet_viewer(0);
+        }
+
         while (state == 8){
     
+            // IC2 GUI output state            
 
 			wait_for_break();	
 			grab_packet();
@@ -602,16 +683,12 @@ int main()
                 sprintf(strbuf2,"%d-",packet[k]);
                 strcat(strbuf, strbuf2);
             }
+
             strcat(strbuf, newline);
             pc.write(strbuf); 
             strbuf[0] = '\0';
             strbuf2[0] = '\0';
             keypad_check(myaction);
         }
-
-		if(state == 255){
-			return 0;
-		}	
 	}
 }
-
