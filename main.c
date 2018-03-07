@@ -34,14 +34,7 @@ void myaction(int button)
 {
 	//printchar(labels[button]);
 
-	if(state == 1 && labels[button] == '7'){
-		//pc.write("Packet begin...\n\r");
-		packet_begin();
-		state = 255;
-		return;
-	}
-	
-	//From state 0 to {1,2}	
+ 	//From state 0 to {1,2}	
 	if (state == 0){
 		if (labels[button] == 'A'){
 			state = 1;
@@ -54,6 +47,11 @@ void myaction(int button)
 			menu(2);
 		//	pc.write("DMX mode selected.\n\r");
 		}
+       if (labels[button] == '8'){
+            state = 8;
+            menu(8); 
+            return;
+        }
 	}
 	
 	// From state 1 (real) to 2 (packet inspector)
@@ -156,6 +154,11 @@ void myaction(int button)
 			menu(2);
 		}
 	}
+
+        if(state == 8 && labels[button] == '8'){
+            state = 0;
+            menu(0);
+        }
 }
 
 void menu(int screen)
@@ -202,14 +205,19 @@ void menu(int screen)
 	if (screen == 4){
 		clear_display();
 		return_home();
-}
+    }
 
 	if (screen == 5){
 		clear_display();
 		return_home();
 		printstr("Trigger...");
-
 	}
+    
+    if (screen == 8){
+        clear_display();
+        return_home();
+        printstr("IC2 Mode.");    
+    }
 }
 
 void packet_viewer(int action)
@@ -463,8 +471,9 @@ int main()
     char strbuf2[10];
 	char cbuf[5];
 	int read_success = 0;
+    char newline[2] = {'\n','\r'};
 	
-	for(int i = 0; i<512; i++){
+    for(int i = 0; i<512; i++){
 		packet[i] = 0;
 	}
 
@@ -478,7 +487,7 @@ int main()
 
 		//We should only use data that has successfully read.
 
-//		sprintf(strbuf,"%d\n\r", state);
+//		sprintf(strbuf,"state: %d\n\r", state);
 //		pc.write(strbuf);
 	
 		if(state == 0){
@@ -488,15 +497,12 @@ int main()
 	
 			while (state == 1){
 
-				char newline[2] = {'\n','\r'};
-
-				//ADD A PAUSE FUNCTIONALITY
 				keypad_check(myaction);
 				return_home();
 				shift_line();		
 				wait_for_break();	
 //				new_grab();
-				//pc.write(break_code);
+				pc.write(break_code);
 				grab_packet();
                // print_packet();
 	            triggermod++;
@@ -510,17 +516,29 @@ int main()
 				//	pc.write(strbuf);
 					printstr(strbuf);
 				}
-			//	char temp[9] = {0xaa, 0xbb, 0xcc, 0xaa, 0xbb, 0xcc, 0xaa, 0xbb, 0xcc};
                // if (triggermod > 3){
                  //   triggermod = 0;	
-                   // UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet, 18, BLOCKING);
-                    strbuf[0] = '\0';
+                    packet[256] = '\0';
+//                    UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet, 16, NONE_BLOCKING);
+
+                    for(int k=0; k<512; k++){
+                        sprintf(strbuf, "%d", packet[k]);
+                        pc.write(strbuf);
+                    }
+
+                 //   pc.write(packet);
+                //    pc.write(strbuf); 
+
+/* FOR MY GUI IC               
+                     strbuf[0] = '\0';
                     for(int k = 0; k<18; k++){
                         sprintf(strbuf2,"%d-",packet[k]);
                         strcat(strbuf, strbuf2);
                     }
                     strcat(strbuf, newline);
                     pc.write(strbuf); 
+*/
+
  //                   print_packet();
                     //for (int k=0; k<7; k++){
                     //UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet[k*64], 64, NONE_BLOCKING);
@@ -572,7 +590,26 @@ int main()
 			}
 		}
 	
-		else if(state == 255){
+        while (state == 8){
+    
+
+			wait_for_break();	
+			grab_packet();
+
+            strbuf[0] = '\0';
+            
+            for(int k = 0; k<17; k++){
+                sprintf(strbuf2,"%d-",packet[k]);
+                strcat(strbuf, strbuf2);
+            }
+            strcat(strbuf, newline);
+            pc.write(strbuf); 
+            strbuf[0] = '\0';
+            strbuf2[0] = '\0';
+            keypad_check(myaction);
+        }
+
+		if(state == 255){
 			return 0;
 		}	
 	}
