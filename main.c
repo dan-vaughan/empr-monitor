@@ -160,10 +160,17 @@ void myaction(int button)
 		}
 	}
 
-        if(state == 8 && labels[button] == '8'){
+        if(state == 8 || state == 9) 
+            if (labels[button] == '0'){
             state = 0;
             menu(0);
-        }
+            }
+            if (labels [button] == '8'){
+                state = 8;
+            }        
+            if (labels [button] == '9'){
+                state = 9;
+            }
 }
 
 void menu(int screen)
@@ -479,6 +486,7 @@ int main()
 	uint8_t buf[5];
 	char strbuf[80];
     char strbuf2[10];
+    int limit = 17;
 	int read_success = 0;
     char newline[2] = {'\n','\r'};
 	
@@ -605,16 +613,22 @@ int main()
             packet_viewer(0);
         }
 
-        while (state == 8){
-    
+        while (state == 8 || state == 9){
+   
+            if (state == 9){
+                limit = 512;
+            }
+            else{ limit = 17;}
+ 
             // IC2 GUI output state            
 
 			wait_for_break();	
 			grab_packet();
 
             strbuf[0] = '\0';
-            
-            for(int k = 0; k<17; k++){
+    
+            //Increase k to 512 for Snapshot Mode        
+            for(int k = 0; k<limit; k++){
                 sprintf(strbuf2,"%d-",packet[k]);
                 strcat(strbuf, strbuf2);
             }
