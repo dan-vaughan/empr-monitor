@@ -16,7 +16,6 @@ Serial pc; // tx, rx
 DMX dmx;
 
 int state = 0;
-int interrupt = 0;
 int total_packets = 0;
 int packet_index = 0;
 int triggermod = 0;
@@ -127,10 +126,6 @@ void myaction(int button)
 
 	if (state == 4){
 
-	//	printchar(labels[button]);
-
-	//	inputlen++;	
-		
 		if(labels[button] == '*'){
 
 			if((packet_index - 4) < 0){
@@ -253,40 +248,12 @@ void packet_viewer(int action)
 		char strbuf[18];
 
 		putcustom(0x10);
-		//printstr(" 0 - 1 - 2 - 3");
 		sprintf(strbuf, "%03d--x--x--%03d", packet_index,  packet_index+3); 
 		printstr(strbuf);
 		putcustom(0x20);
 		shift_line();						//BELOW LINE contains a bodge (adding extra 1 to index to mitigate off by one)	
 		sprintf(strbuf,"  %2x %2x %2x  %2x", packet[packet_index+1], packet[packet_index+2], packet[packet_index+3], packet[packet_index+4]);
-		//sprintf(strbuf," ff  ff  ff  ff");
 		printstr(strbuf);
-}
-
-void UART1_IRQHandler(void)
-{
-//	uint32_t intsrc;
-//	intsrc = UART_GetIntId((LPC_UART_TypeDef*)LPC_UART1);
-//	pc.write("Interrupt Detected!\n\r");
-//    NVIC_SetPriority(UART1_IRQn, 32);
-	
-	uint32_t iir = LPC_UART1->IIR;
-	uint32_t rls = LPC_UART1->LSR;
-//	NVIC_ClearPendingIRQ(UART1_IRQn);
-	interrupt = 1;
-}
-
-void startup_screen()
-{
-	setup_display();
-	printstr("                ");
-	shift_line();
-	printstr("                ");
-	return_home();
-	printstr("A: Real-time");
-	shift_line();
-	printstr("B: DMX Inspector");
-	return_home();
 }
 
 void packet_begin()
@@ -364,31 +331,6 @@ void grab_four_bytes(char* cbuf)
 	}
 }
 
-void new_grab()
-{
-	int count = 0;
-	int read_success;
-	uint8_t buf[5]; 
-	char strbuf[40];
-	char mstrbuf[512];
-	int j=0;
-
-		
-		UART_Receive((LPC_UART_TypeDef *)LPC_UART1,(uint8_t*)packet,512, NONE_BLOCKING);
-		UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)packet,512,NONE_BLOCKING);
-
-/*	for(int i=0; i<16; i++){
-		for (int j=0; j<32;j++){
-			sprintf(strbuf, "%2.2x",packet[((i*16)+j)]);
-			//strcat(strbuf, strbuf2);
-		//	packet[(i*16)+j] = mstrbuf[(i*16)+j];
-			pc.write(strbuf);
-		}	//	pc.write(mstrbuf);
-}
-*/
-	//	pc.write(packet);
-	//	pc.write("\n\r\n\r");	
-}
 void grab_packet()
 {
 	//Reads and writes the next 512 bytes into packet char array
@@ -486,8 +428,6 @@ void capture_packet_trigger()
     }
 }
 
-
-
 void print_packet()
 {
 
@@ -533,12 +473,12 @@ void wait_for_break()
 
 int main()
 {
+
 //	pc.write("Starting...\n\r");
 
 	uint8_t buf[5];
 	char strbuf[80];
     char strbuf2[10];
-	char cbuf[5];
 	int read_success = 0;
     char newline[2] = {'\n','\r'};
 	
@@ -581,7 +521,6 @@ int main()
 	//			grab_four_bytes(cbuf);
 //				pc.write(packet);
                 //UART_Receive((LPC_UART_TypeDef *)LPC_UART1,(uint8_t*)packet,512, NONE_BLOCKING);
-                			//	sprintf(strbuf, "%3d %3d %3d %3d", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //decimal
 				for(int i=1; i<5;i++){
 					sprintf(strbuf, "%3d ",packet[i]);
 				//	pc.write(strbuf);
@@ -611,10 +550,6 @@ int main()
                 pc.write(newline);
                 strbuf[0] = '\0';
                 strbuf2[0] = '\0';
-					//sprintf(strbuf, "x%2.2x x%2.2x x%2.2x x%2.2x", cbuf[1], cbuf[2], cbuf[3], cbuf[4]); //hex
-				//printstr(strbuf);
-			//	sprintf(strbuf, "%3d %3d %3d %3d\n\r", cbuf[1], cbuf[2], cbuf[3], cbuf[4]);	
-			//	pc.write(strbuf);		
 				total_packets++;	
 				keypad_check(myaction);
 			}
@@ -689,6 +624,7 @@ int main()
             strbuf[0] = '\0';
             strbuf2[0] = '\0';
             keypad_check(myaction);
+
         }
 	}
 }
