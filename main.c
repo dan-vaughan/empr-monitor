@@ -18,10 +18,15 @@ DMX dmx;
 int state = 0;
 int total_packets = 0;
 int packet_index = 1;
-int inputmod= 0;
 int trigger_slot = 0;
 
+int inputmod = 0;
+int input_hun = 0;
+int input_ten = 0;
+
 char packet[512];	
+
+char strbuf[20];
 
 char break_code[3] = {0x42,0x84,0xc6};
 
@@ -47,6 +52,7 @@ void myaction(int button)
 		//	pc.write("DMX mode selected.\n\r");
 		}
        if (labels[button] == '8'){
+            pc.write("HERE1\n\r");
             state = 8;
             menu(8); 
             return;
@@ -98,10 +104,14 @@ void myaction(int button)
 	}
 
     if (state == 5){
-        if (labels[button] == 'A'){
+
+            if (labels[button] == 'A'){
             //Capture three digit number here, set it to trigger_slot
-            pc.write("Changing trigger.");
+            pc.write("Changing trigger.\n\r");
+            state = 11;
             menu(6);
+
+            return;
         }
         if (labels[button] == 'B'){
             pc.write("Capturing.");
@@ -109,6 +119,59 @@ void myaction(int button)
             menu(7);
         }
     }
+
+    if (state == 11){
+
+        printchar(labels[button]);
+
+         if((button < 3) || (button == 4) || (button == 5) || (button == 6) || (button == 8)
+               || (button == 9) || (button == 10) || (button == 13))
+            {
+
+                char s = labels[button];
+
+                int in = atoi(&s);
+
+                if (inputmod == 0){
+                    input_hun = in * 100;
+                }
+                if (inputmod == 1){
+                    input_ten = in * 10;
+                }
+
+                if (inputmod == 2){
+                    int slot = input_hun + input_ten + in; 
+                    if ((slot < 0) || (slot > 512)){
+                        return_home();
+                        clear_display();
+                        printstr("Error.");
+                        shift_line();
+                        printstr("Must be 0 - 512.");
+                        delay(7000000);
+                        inputmod = (inputmod+1) % 3;
+                        menu(6);
+                        return;
+                    }
+                    trigger_slot = slot;
+                    return_home();
+                    clear_display();
+                    printstr("Slot updated!");
+                    shift_line();
+                    printstr("   ---");
+                    sprintf(strbuf, "%d", trigger_slot);
+                    printstr(strbuf);
+                    printstr("---");
+                    sprintf(strbuf, "%d\n\r", trigger_slot);
+                    pc.write(strbuf); 
+                    delay(7000000);
+                    state = 5;
+                    menu(5);
+                }
+        
+                inputmod = (inputmod+1) % 3;
+            }
+            
+        }
 
 	if (state == 3){
 		if(labels[button] == 'A'){
@@ -163,10 +226,10 @@ void myaction(int button)
 		}
 	}
 
-        if(state == 8 || state == 9) 
+        if(state == 8 || state == 9){ 
             if (labels[button] == '0'){
-            state = 0;
-            menu(0);
+                state = 0;
+                menu(0);
             }
             if (labels [button] == '8'){
                 state = 8;
@@ -176,6 +239,7 @@ void myaction(int button)
                 state = 9;
                 menu(9);
             }
+        }
 }
 
 void menu(int screen)
@@ -423,9 +487,9 @@ void capture_packet_trigger()
     char strbuf[40];
 
 	while(1){
-        pc.write("Looping\n\r");
-        sprintf(strbuf, "found %d\n\r", found);
-        pc.write(strbuf);
+        //pc.write("Looping\n\r");
+        //sprintf(strbuf, "found %d\n\r", found);
+        //pc.write(strbuf);
         if(temp_packet[trigger_slot] != packet[trigger_slot]){
             for(int i = 0; i<512; i++){
                     packet[i] = temp_packet[i];
@@ -437,7 +501,7 @@ void capture_packet_trigger()
         wait_for_break();
 
         while(1){
-                pc.write("Inner Loop.\n\r");
+                //pc.write("Inner Loop.\n\r");
     		if(j>511){
                 j = 0;
 	    	    break;
@@ -448,8 +512,8 @@ void capture_packet_trigger()
         
 		    for(int i = 0; i<read_success; i++){	
                 //sprintf(strbuf, "temp[%d] %d buf[%d] %d\n\r",(j+i), temp_packet[j+i], i, buf[i]);
-                    sprintf(strbuf, "%d: %d %d\n\r", (j+i), buf[i], packet[i]);
-                    pc.write(strbuf);
+                    //sprintf(strbuf, "%d: %d %d\n\r", (j+i), buf[i], packet[i]);
+                    //pc.write(strbuf);
             	
                     temp_packet[j+i] = buf[i];
 	        	}
@@ -524,8 +588,8 @@ int main()
 	while (1)
 	{
 		
-		sprintf(strbuf,"state: %d\n\r", state);
-		pc.write(strbuf);
+//		sprintf(strbuf,"state: %d\n\r", state);
+//		pc.write(strbuf);
 	
 		if(state == 0){
         
@@ -628,7 +692,7 @@ int main()
 			}
 		}
 
-        while(state == 5){
+        while(state == 5 || state == 11){
             keypad_check(myaction);
         }
 	
