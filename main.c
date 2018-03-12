@@ -19,6 +19,7 @@ int state = 0;
 int total_packets = 0;
 int packet_index = 1;
 int trigger_slot = 0;
+int packetmod = 0;
 
 int inputmod = 0;
 int input_hun = 0;
@@ -753,29 +754,22 @@ int main()
 
 			wait_for_break();	
            	pc.write(break_code);
-			grab_packet();
+			
+            grab_packet();
+            
 
-            strbuf[0] = '\0';
-    
-            /*if (state == 12){
-                for(int k = 0; k<512; k++){
-                sprintf(strbuf2,"%d",packet[k]);
-                pc.write(strbuf2);
+            char temp[16];
+            for (int k = 0; k<32; k++){
+                for (int m = 0; m<16; m++){
+                    temp[m] = packet[m];
                 }
+                int success = UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)temp, 16, BLOCKING);
             }
-            if (state == 13){*/
-                char temp[16];
-                for (int k = 0; k<32; k++){
-                    for (int m = 0; m<16; m++){
-                        temp[m] = packet[m];
-                    }
-                  int success = UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)temp, 16, BLOCKING);
-                }
-          //  }
-
+            
+            strbuf[0] = '\0';
             strbuf2[0] = '\0';
- 
-             keypad_check(myaction);
+            keypad_check(myaction);
+            packetmod++;
         }
 
         while (state == 8 || state == 9){
