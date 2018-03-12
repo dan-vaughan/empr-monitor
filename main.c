@@ -757,16 +757,21 @@ int main()
 
             strbuf[0] = '\0';
     
-            //Increase k to 512 for Snapshot Mode        
-            if (state == 12){
+            /*if (state == 12){
                 for(int k = 0; k<512; k++){
-                sprintf(strbuf2,"%d-",packet[k]);
+                sprintf(strbuf2,"%d",packet[k]);
                 pc.write(strbuf2);
                 }
             }
-            if (state == 13){
-                pc.write(packet);
-            }
+            if (state == 13){*/
+                char temp[16];
+                for (int k = 0; k<32; k++){
+                    for (int m = 0; m<16; m++){
+                        temp[m] = packet[m];
+                    }
+                  int success = UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)temp, 16, BLOCKING);
+                }
+          //  }
 
             strbuf2[0] = '\0';
  
@@ -789,7 +794,7 @@ int main()
     
             //Increase k to 512 for Snapshot Mode        
             for(int k = 0; k<IC2limit; k++){
-                sprintf(strbuf2,"%d",packet[k]);
+                sprintf(strbuf2,"%d-",packet[k]);
                 pc.write(strbuf2);
                 //strcat(mstrstrbuf, strbuf2);
             }
