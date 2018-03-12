@@ -650,7 +650,7 @@ int main()
 				shift_line();		
 				wait_for_break();	
 //				new_grab();
-				pc.write(break_code);
+			//	pc.write(break_code);
 				grab_packet();
                // print_packet();
     	//		pc.write(newline);
@@ -664,13 +664,13 @@ int main()
 				}
                // if (triggermod > 3){
                  //   triggermod = 0;	
-                    packet[256] = '\0';
+                   // packet[256] = '\0';
 //                    UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet, 16, NONE_BLOCKING);
 
-                    for(int k=0; k<512; k++){
-                        sprintf(strbuf, "%d", packet[k]);
-                        pc.write(strbuf);
-                    }
+            //        for(int k=0; k<512; k++){
+              //          sprintf(strbuf, "%d", packet[k]);
+                //        pc.write(strbuf);
+                  //  }
 
                  //   pc.write(packet);
                 //    pc.write(strbuf); 
@@ -683,7 +683,7 @@ int main()
                    // }
 //                    pc.write(packet);
  
-                pc.write(newline);
+            //    pc.write(newline);
                 strbuf[0] = '\0';
                 strbuf2[0] = '\0';
 				total_packets++;	
