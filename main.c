@@ -51,10 +51,15 @@ void myaction(int button)
 			menu(2);
 		//	pc.write("DMX mode selected.\n\r");
 		}
-       if (labels[button] == '8'){
-            pc.write("HERE1\n\r");
+        if (labels[button] == '*'){
             state = 8;
             menu(8); 
+            return;
+        }
+
+        if(labels[button] == '#'){
+            state = 12;
+            menu(12);
             return;
         }
 	}
@@ -99,22 +104,21 @@ void myaction(int button)
 		if (labels[button] == 'D'){
 			state = 5;
 			menu(5);
-			pc.write("Trigger mode selected.\n\r");
+			//pc.write("Trigger mode selected.\n\r");
 		}
 	}
 
     if (state == 5){
 
             if (labels[button] == 'A'){
-            //Capture three digit number here, set it to trigger_slot
-            pc.write("Changing trigger.\n\r");
+            //pc.write("Changing trigger.\n\r");
             state = 11;
             menu(6);
 
             return;
         }
         if (labels[button] == 'B'){
-            pc.write("Capturing.");
+            //pc.write("Capturing.");
             state = 6;
             menu(7);
         }
@@ -162,7 +166,7 @@ void myaction(int button)
                     printstr(strbuf);
                     printstr("---");
                     sprintf(strbuf, "%d\n\r", trigger_slot);
-                    pc.write(strbuf); 
+            //        pc.write(strbuf); 
                     delay(7000000);
                     state = 5;
                     menu(5);
@@ -240,6 +244,25 @@ void myaction(int button)
                 menu(9);
             }
         }
+
+    if (state == 12 || state == 13){
+
+       if(labels[button] == '#'){
+            if(state == 12){  
+                state = 13;
+                 menu(13);
+            }
+            else if(state == 13){
+                state = 12;
+                menu(12);
+            }
+        }
+
+        if(labels[button] == '0'){
+            state = 0;
+            menu(0);
+        }
+    }
 }
 
 void menu(int screen)
@@ -322,6 +345,22 @@ void menu(int screen)
         printstr("IC2 Mode");
         shift_line();
         printstr("(Snapshot)");
+    }
+
+    if (screen == 12){
+        return_home();
+        clear_display();
+        printstr("PC Mode.");
+        shift_line();
+        printstr("(Full)");
+    }
+
+    if (screen == 13){
+        return_home();
+        clear_display();
+        printstr("PC Mode.");
+        shift_line();
+        printstr("(Raw)");
     }
 }
 
@@ -708,6 +747,32 @@ int main()
             packet_viewer(0);
         }
 
+        while (state == 12 || state == 13){
+        
+            // State for PC monitor
+
+			wait_for_break();	
+           	pc.write(break_code);
+			grab_packet();
+
+            strbuf[0] = '\0';
+    
+            //Increase k to 512 for Snapshot Mode        
+            if (state == 12){
+                for(int k = 0; k<512; k++){
+                sprintf(strbuf2,"%d-",packet[k]);
+                pc.write(strbuf2);
+                }
+            }
+            if (state == 13){
+                pc.write(packet);
+            }
+
+            strbuf2[0] = '\0';
+ 
+             keypad_check(myaction);
+        }
+
         while (state == 8 || state == 9){
    
             // IC2 GUI output state            
@@ -724,7 +789,7 @@ int main()
     
             //Increase k to 512 for Snapshot Mode        
             for(int k = 0; k<IC2limit; k++){
-                sprintf(strbuf2,"%d-",packet[k]);
+                sprintf(strbuf2,"%d",packet[k]);
                 pc.write(strbuf2);
                 //strcat(mstrstrbuf, strbuf2);
             }
