@@ -17,8 +17,8 @@ DMX dmx;
 
 int state = 0;
 int total_packets = 0;
-int packet_index = 0;
-int triggermod = 0;
+int packet_index = 1;
+int inputmod= 0;
 int trigger_slot = 0;
 
 char packet[512];	
@@ -93,15 +93,18 @@ void myaction(int button)
 		if (labels[button] == 'D'){
 			state = 5;
 			menu(5);
-		//	pc.write("Trigger mode selected.\n\r");
+			pc.write("Trigger mode selected.\n\r");
 		}
 	}
+
     if (state == 5){
         if (labels[button] == 'A'){
             //Capture three digit number here, set it to trigger_slot
+            pc.write("Changing trigger.");
             menu(6);
         }
         if (labels[button] == 'B'){
+            pc.write("Capturing.");
             state = 6;
             menu(7);
         }
@@ -167,9 +170,11 @@ void myaction(int button)
             }
             if (labels [button] == '8'){
                 state = 8;
+                menu(8);
             }        
             if (labels [button] == '9'){
                 state = 9;
+                menu(9);
             }
 }
 
@@ -205,7 +210,7 @@ void menu(int screen)
 		clear_display();
 		printstr("C: Capture Next");
 		shift_line();
-		printstr("D: Set Trigger");
+		printstr("D: Trigger Mode");
 	}
 
 	if (screen == 3){
@@ -220,29 +225,39 @@ void menu(int screen)
     }
 
 	if (screen == 5){
-		clear_display();
 		return_home();
+		clear_display();
 		printstr("A: Set Trigger");
         shift_line();
         printstr("B: Capture");
 	}
 
     if (screen == 6){
-        clear_display();
         return_home();
+        clear_display();
         printstr("Slot:");
     }
     
     if (screen == 7){
-        clear_display();
         return_home();
+        clear_display();
         printstr("Waiting...");
     }
 
     if (screen == 8){
         clear_display();
         return_home();
-        printstr("IC2 Mode.");    
+        printstr("IC2 Mode.");
+        shift_line();
+        printstr("(Real-time)");    
+    }
+    
+    if (screen == 9){
+        clear_display();
+        return_home();
+        printstr("IC2 Mode");
+        shift_line();
+        printstr("(Snapshot)");
     }
 }
 
@@ -253,6 +268,9 @@ void packet_viewer(int action)
 		*/
 	
 		char strbuf[18];
+
+        return_home();
+        clear_display();
 
 		putcustom(0x10);
 		sprintf(strbuf, "%03d--x--x--%03d", packet_index,  packet_index+3); 
@@ -402,9 +420,13 @@ void capture_packet_trigger()
 	int j=0;
     int found = 0;
 
-	while(1){
+    char strbuf[40];
 
-        if(found == 1){
+	while(1){
+        pc.write("Looping\n\r");
+        sprintf(strbuf, "found %d\n\r", found);
+        pc.write(strbuf);
+        if(temp_packet[trigger_slot] != packet[trigger_slot]){
             for(int i = 0; i<512; i++){
                     packet[i] = temp_packet[i];
                 }
@@ -415,11 +437,8 @@ void capture_packet_trigger()
         wait_for_break();
 
         while(1){
-
+                pc.write("Inner Loop.\n\r");
     		if(j>511){
-                if(temp_packet[trigger_slot] != packet[trigger_slot]){
-                    found = 1;
-                }
                 j = 0;
 	    	    break;
             }
@@ -428,9 +447,14 @@ void capture_packet_trigger()
 	    	if(read_success == 0){ continue;}
         
 		    for(int i = 0; i<read_success; i++){	
-				temp_packet[j+i] = buf[i];
-		}
+                //sprintf(strbuf, "temp[%d] %d buf[%d] %d\n\r",(j+i), temp_packet[j+i], i, buf[i]);
+                    sprintf(strbuf, "%d: %d %d\n\r", (j+i), buf[i], packet[i]);
+                    pc.write(strbuf);
+            	
+                    temp_packet[j+i] = buf[i];
+	        	}
 			j += read_success;
+
 	    }
     }
 }
@@ -486,7 +510,8 @@ int main()
 	uint8_t buf[5];
 	char strbuf[80];
     char strbuf2[10];
-    int limit = 17;
+    char mstrstrbuf[600];
+    int IC2limit = 17;
 	int read_success = 0;
     char newline[2] = {'\n','\r'};
 	
@@ -499,8 +524,8 @@ int main()
 	while (1)
 	{
 		
-//		sprintf(strbuf,"state: %d\n\r", state);
-//		pc.write(strbuf);
+		sprintf(strbuf,"state: %d\n\r", state);
+		pc.write(strbuf);
 	
 		if(state == 0){
         
@@ -524,7 +549,6 @@ int main()
 				pc.write(break_code);
 				grab_packet();
                // print_packet();
-	            triggermod++;
     	//		pc.write(newline);
 	//			grab_four_bytes(cbuf);
 //				pc.write(packet);
@@ -603,24 +627,31 @@ int main()
 				keypad_check(myaction);
 			}
 		}
+
+        while(state == 5){
+            keypad_check(myaction);
+        }
 	
         if(state == 6){
 
             //Waiting for packet change in trigger slot state
-            
+            pc.write("Attempting packet capture.\n\r"); 
             capture_packet_trigger();
+            pc.write("Packet captured!\n\r");
             state = 4;
+            packet_index = 1;
+            
             packet_viewer(0);
         }
 
         while (state == 8 || state == 9){
    
-            if (state == 9){
-                limit = 512;
-            }
-            else{ limit = 17;}
- 
             // IC2 GUI output state            
+            
+            if (state == 9){
+                IC2limit = 500;
+            }
+            else{ IC2limit = 17;}
 
 			wait_for_break();	
 			grab_packet();
@@ -628,14 +659,15 @@ int main()
             strbuf[0] = '\0';
     
             //Increase k to 512 for Snapshot Mode        
-            for(int k = 0; k<limit; k++){
+            for(int k = 0; k<IC2limit; k++){
                 sprintf(strbuf2,"%d-",packet[k]);
-                strcat(strbuf, strbuf2);
+                pc.write(strbuf2);
+                //strcat(mstrstrbuf, strbuf2);
             }
 
-            strcat(strbuf, newline);
-            pc.write(strbuf); 
-            strbuf[0] = '\0';
+            strcat(mstrstrbuf, newline);
+            pc.write(mstrstrbuf); 
+            mstrstrbuf[0] = '\0';
             strbuf2[0] = '\0';
             keypad_check(myaction);
 
