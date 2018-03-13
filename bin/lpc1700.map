@@ -1,0 +1,1994 @@
+Archive member included because of file (symbol)
+
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-atoi.o)
+                              main.o (atoi)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o)
+                              main.o (sprintf)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcat.o)
+                              main.o (strcat)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcpy.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcat.o) (strcpy)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strlen.o)
+                              lib/serial.o (strlen)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-atoi.o) (_strtol_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o) (_svfprintf_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-vsprintf.o)
+                              lib/serial.o (vsprintf)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-ctype_.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o) (__ctype_ptr__)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (_dtoa_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-impure.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o) (_impure_ptr)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (_localeconv_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-malloc.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o) (malloc)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (_malloc_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memchr.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (memchr)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memcpy.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o) (memcpy)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mlock.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o) (__malloc_lock)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o) (_Balloc)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-s_fpclassify.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (__fpclassifyd)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o) (_sbrk_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcmp.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o) (strcmp)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (__ssprint_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-callocr.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o) (_calloc_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-freer.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-malloc.o) (_free_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memmove.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o) (memmove)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memset.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-callocr.o) (memset)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reallocr.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o) (_realloc_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o) (errno)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivsi3.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o) (__aeabi_uidiv)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_dvmd_tls.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_addsubdf3.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o) (__aeabi_dsub)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_muldivdf3.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o) (__aeabi_dmul)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_cmpdf2.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (__aeabi_dcmpeq)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_fixdfsi.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o) (__aeabi_d2iz)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o) (__aeabi_uldivmod)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_aeabi_uldivmod.o) (__gnu_uldivmod_helper)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+                              lib/display.o (__aeabi_unwind_cpp_pr0)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(libunwind.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o) (restore_core_regs)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o) (__gnu_unwind_execute)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o) (__divdi3)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o) (__udivdi3)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o) (abort)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signal.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o) (raise)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signal.o) (_kill_r)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+                              (__cs3_start_c)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_exit.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o) (_exit)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_kill.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o) (_kill)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o) (_sbrk)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_getpid.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o) (_getpid)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+                              /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o (_start)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o) (__errno)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o) (__libc_init_array)
+/opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(heap.o)
+                              /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o) (__cs3_heap_limit)
+/opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                              lib/analog.o (ADC_Init)
+/opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                              /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o) (CLKPWR_GetPCLK)
+/opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+                              lib/analog.o (DAC_Init)
+/opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                              lib/i2c.o (I2C_Init)
+/opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+                              /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o) (check_failed)
+/opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+                              lib/pindef.o (PINSEL_ConfigPin)
+/opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                              lib/serial.o (UART_Init)
+
+Allocating common symbols
+Common symbol       size              file
+
+errno               0x4               /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00080000         xr
+ram              0x10000000         0x00008000         xrw
+ram1             0x2007c000         0x00004000         xrw
+ram2             0x20080000         0x00004000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+LOAD lib/serial.o
+LOAD lib/pindef.o
+LOAD main.o
+LOAD lib/i2c.o
+LOAD lib/display.o
+LOAD lib/keypad.o
+LOAD lib/analog.o
+LOAD lib/serial-dmx.o
+LOAD lib/utilities.o
+LOAD /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+LOAD /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+LOAD /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+START GROUP
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libstdc++.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libsupc++.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a
+END GROUP
+START GROUP
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3micro.a
+END GROUP
+                0x10008000                PROVIDE (__cs3_stack, (__cs3_region_start_ram + __cs3_region_size_ram))
+                0x00007750                PROVIDE (__cs3_stack_size, ((__cs3_region_start_ram + __cs3_region_size_ram) - _end))
+                0x100008b0                PROVIDE (__cs3_heap_start, _end)
+                0x10008000                PROVIDE (__cs3_heap_end, (__cs3_region_start_ram + __cs3_region_size_ram))
+
+.text           0x00000000     0xdce8
+ CREATE_OBJECT_SYMBOLS
+                0x00000000                __cs3_region_start_rom = .
+ *(.cs3.region-head.rom)
+                0x00000000                __cs3_interrupt_vector = __cs3_interrupt_vector_cortex_m
+ *(.cs3.interrupt_vector)
+ .cs3.interrupt_vector
+                0x00000000       0xcc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x00000000                __cs3_interrupt_vector_cortex_m
+                0x00000001                ASSERT ((. != __cs3_interrupt_vector_cortex_m), No interrupt vector)
+ *(.rom)
+ *(.rom.b)
+                0x000000cc                __cs3_reset = __cs3_reset_cortex_m
+ *(.cs3.reset)
+ .cs3.reset     0x000000cc       0x10 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x000000cc                __cs3_reset_cortex_m
+                0x00000001                ASSERT ((. != __cs3_reset), No reset code)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x000000dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .text          0x000000dc       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .text          0x0000010c        0x0 lib/serial.o
+ .text._ZN6SerialC2Ev
+                0x0000010c       0x98 lib/serial.o
+                0x0000010c                _ZN6SerialC2Ev
+                0x0000010c                _ZN6SerialC1Ev
+ .text._ZN6Serial4initEv
+                0x000001a4       0x58 lib/serial.o
+                0x000001a4                _ZN6Serial4initEv
+ .text._ZN6Serial6printfEPcz
+                0x000001fc       0x48 lib/serial.o
+                0x000001fc                _ZN6Serial6printfEPcz
+ .text._ZN6Serial5writeEPc
+                0x00000244       0x38 lib/serial.o
+                0x00000244                _ZN6Serial5writeEPc
+ .text          0x0000027c        0x0 lib/pindef.o
+ .text._Z7pinconf15PINSEL_CFG_Type
+                0x0000027c       0x1c lib/pindef.o
+                0x0000027c                _Z7pinconf15PINSEL_CFG_Type
+ .text          0x00000298        0x0 main.o
+ .text._Z8myactioni
+                0x00000298      0x7ec main.o
+                0x00000298                _Z8myactioni
+ .text._Z4menui
+                0x00000a84      0x1e0 main.o
+                0x00000a84                _Z4menui
+ .text._Z13packet_vieweri
+                0x00000c64       0xec main.o
+                0x00000c64                _Z13packet_vieweri
+ .text._Z11grab_packetv
+                0x00000d50       0xb4 main.o
+                0x00000d50                _Z11grab_packetv
+ .text._Z22capture_packet_triggerv
+                0x00000e04      0x128 main.o
+                0x00000e04                _Z22capture_packet_triggerv
+ .text._Z14wait_for_breakv
+                0x00000f2c       0x60 main.o
+                0x00000f2c                _Z14wait_for_breakv
+ .text.main     0x00000f8c      0x4ec main.o
+                0x00000f8c                main
+ .text._Z41__static_initialization_and_destruction_0ii
+                0x00001478       0xb4 main.o
+ .text._GLOBAL__I_labels
+                0x0000152c       0x14 main.o
+ .text          0x00001540        0x0 lib/i2c.o
+ .text._ZN3I2CC2E15PINSEL_CFG_TypeS0_
+                0x00001540       0x44 lib/i2c.o
+                0x00001540                _ZN3I2CC1E15PINSEL_CFG_TypeS0_
+                0x00001540                _ZN3I2CC2E15PINSEL_CFG_TypeS0_
+ .text._ZN3I2C4initEv
+                0x00001584       0x34 lib/i2c.o
+                0x00001584                _ZN3I2C4initEv
+ .text._ZN3I2C5writeEmPhm
+                0x000015b8       0xb0 lib/i2c.o
+                0x000015b8                _ZN3I2C5writeEmPhm
+ .text._ZN3I2C4readEmPhm
+                0x00001668       0xb0 lib/i2c.o
+                0x00001668                _ZN3I2C4readEmPhm
+ .text          0x00001718        0x0 lib/display.o
+ .text._Z5resetv
+                0x00001718       0x44 lib/display.o
+                0x00001718                _Z5resetv
+ .text._Z13setup_displayv
+                0x0000175c       0x3c lib/display.o
+                0x0000175c                _Z13setup_displayv
+ .text._Z11return_homev
+                0x00001798       0x34 lib/display.o
+                0x00001798                _Z11return_homev
+ .text._Z10shift_linev
+                0x000017cc       0x34 lib/display.o
+                0x000017cc                _Z10shift_linev
+ .text._Z12cursor_shift10Shift_Typei
+                0x00001800       0xb0 lib/display.o
+                0x00001800                _Z12cursor_shift10Shift_Typei
+ .text._Z9printcharc
+                0x000018b0       0x44 lib/display.o
+                0x000018b0                _Z9printcharc
+ .text._Z9putcustomc
+                0x000018f4       0x3c lib/display.o
+                0x000018f4                _Z9putcustomc
+ .text._Z8printstrPc
+                0x00001930       0x44 lib/display.o
+                0x00001930                _Z8printstrPc
+ .text._Z13clear_displayv
+                0x00001974       0x28 lib/display.o
+                0x00001974                _Z13clear_displayv
+ .text          0x0000199c        0x0 lib/keypad.o
+ .text._Z8checkrowcciPFviE
+                0x0000199c      0x124 lib/keypad.o
+                0x0000199c                _Z8checkrowcciPFviE
+ .text._Z12keypad_checkPFviE
+                0x00001ac0       0x88 lib/keypad.o
+                0x00001ac0                _Z12keypad_checkPFviE
+ .text          0x00001b48        0x0 lib/analog.o
+ .text._ZN8AnalogInC2E15PINSEL_CFG_Type
+                0x00001b48       0x30 lib/analog.o
+                0x00001b48                _ZN8AnalogInC1E15PINSEL_CFG_Type
+                0x00001b48                _ZN8AnalogInC2E15PINSEL_CFG_Type
+ .text._ZN9AnalogOutC2E15PINSEL_CFG_Type
+                0x00001b78       0x30 lib/analog.o
+                0x00001b78                _ZN9AnalogOutC2E15PINSEL_CFG_Type
+                0x00001b78                _ZN9AnalogOutC1E15PINSEL_CFG_Type
+ .text._ZN8AnalogIn4initEv
+                0x00001ba8       0x4c lib/analog.o
+                0x00001ba8                _ZN8AnalogIn4initEv
+ .text._ZN9AnalogOut4initEv
+                0x00001bf4       0x1c lib/analog.o
+                0x00001bf4                _ZN9AnalogOut4initEv
+ .text._ZN8AnalogIn4readEv
+                0x00001c10       0x5c lib/analog.o
+                0x00001c10                _ZN8AnalogIn4readEv
+ .text._ZN9AnalogOut5writeEm
+                0x00001c6c       0x20 lib/analog.o
+                0x00001c6c                _ZN9AnalogOut5writeEm
+ .text          0x00001c8c        0x0 lib/serial-dmx.o
+ .text._ZN3DMXC2Ev
+                0x00001c8c       0x98 lib/serial-dmx.o
+                0x00001c8c                _ZN3DMXC2Ev
+                0x00001c8c                _ZN3DMXC1Ev
+ .text._ZN3DMX4initEv
+                0x00001d24       0x84 lib/serial-dmx.o
+                0x00001d24                _ZN3DMX4initEv
+ .text._ZN3DMX4sendEPci
+                0x00001da8       0x44 lib/serial-dmx.o
+                0x00001da8                _ZN3DMX4sendEPci
+ .text._ZN3DMX5writeEPci
+                0x00001dec       0x30 lib/serial-dmx.o
+                0x00001dec                _ZN3DMX5writeEPci
+ .text._ZN3DMX4readEPh
+                0x00001e1c       0x34 lib/serial-dmx.o
+                0x00001e1c                _ZN3DMX4readEPh
+ .text._ZN3DMX10send_breakEv
+                0x00001e50       0x30 lib/serial-dmx.o
+                0x00001e50                _ZN3DMX10send_breakEv
+ .text._ZN3DMX9end_breakEv
+                0x00001e80       0x30 lib/serial-dmx.o
+                0x00001e80                _ZN3DMX9end_breakEv
+ .text          0x00001eb0        0x0 lib/utilities.o
+ .text._Z5delayi
+                0x00001eb0       0x34 lib/utilities.o
+                0x00001eb0                _Z5delayi
+ .text          0x00001ee4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .text          0x00001ee4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .text.SystemCoreClockUpdate
+                0x00001ee4      0x228 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                0x00001ee4                SystemCoreClockUpdate
+ .text.SystemInit
+                0x0000210c      0x240 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                0x0000210c                SystemInit
+ .text          0x0000234c       0x14 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x0000234c                NMI_Handler
+                0x0000234e                HardFault_Handler
+                0x00002350                MemManage_Handler
+                0x00002352                BusFault_Handler
+                0x00002354                UsageFault_Handler
+                0x00002356                SVC_Handler
+                0x00002358                DebugMon_Handler
+                0x0000235a                PendSV_Handler
+                0x0000235c                SysTick_Handler
+                0x0000235e                TIMER2_IRQHandler
+                0x0000235e                RIT_IRQHandler
+                0x0000235e                I2C0_IRQHandler
+                0x0000235e                USBActivity_IRQHandler
+                0x0000235e                PWM1_IRQHandler
+                0x0000235e                I2C1_IRQHandler
+                0x0000235e                EINT2_IRQHandler
+                0x0000235e                UART1_IRQHandler
+                0x0000235e                EINT3_IRQHandler
+                0x0000235e                CANActivity_IRQHandler
+                0x0000235e                TIMER3_IRQHandler
+                0x0000235e                UART0_IRQHandler
+                0x0000235e                PLL0_IRQHandler
+                0x0000235e                CAN_IRQHandler
+                0x0000235e                PLL1_IRQHandler
+                0x0000235e                SSP0_IRQHandler
+                0x0000235e                I2S_IRQHandler
+                0x0000235e                I2C2_IRQHandler
+                0x0000235e                RTC_IRQHandler
+                0x0000235e                TIMER0_IRQHandler
+                0x0000235e                SPI_IRQHandler
+                0x0000235e                EINT1_IRQHandler
+                0x0000235e                TIMER1_IRQHandler
+                0x0000235e                UART2_IRQHandler
+                0x0000235e                Default_Handler
+                0x0000235e                ADC_IRQHandler
+                0x0000235e                SSP1_IRQHandler
+                0x0000235e                USB_IRQHandler
+                0x0000235e                BOD_IRQHandler
+                0x0000235e                WDT_IRQHandler
+                0x0000235e                QEI_IRQHandler
+                0x0000235e                EINT0_IRQHandler
+                0x0000235e                DMA_IRQHandler
+                0x0000235e                UART3_IRQHandler
+                0x0000235e                MCPWM_IRQHandler
+                0x0000235e                ENET_IRQHandler
+ .text          0x00002360       0x10 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-atoi.o)
+                0x00002360                atoi
+                0x00002368                _atoi_r
+ .text          0x00002370       0x94 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o)
+                0x00002370                _sprintf_r
+                0x000023b4                sprintf
+ .text          0x00002404       0x50 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcat.o)
+                0x00002404                strcat
+ .text          0x00002454       0xbc /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcpy.o)
+                0x00002454                strcpy
+ .text          0x00002510       0x60 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strlen.o)
+                0x00002510                strlen
+ .text          0x00002570      0x17c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o)
+                0x00002570                _strtol_r
+                0x000026d4                strtol
+ .text          0x000026ec     0x1658 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+                0x000026ec                _svfprintf_r
+ .text          0x00003d44       0x4c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-vsprintf.o)
+                0x00003d44                _vsprintf_r
+                0x00003d78                vsprintf
+ .text          0x00003d90        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-ctype_.o)
+ .text          0x00003d90     0x1000 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o)
+                0x00003ebc                _dtoa_r
+ .text          0x00004d90        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-impure.o)
+ .text          0x00004d90       0xa0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o)
+                0x00004d90                _setlocale_r
+                0x00004dec                __locale_charset
+                0x00004df8                __locale_mb_cur_max
+                0x00004e04                __locale_msgcharset
+                0x00004e0c                __locale_cjk_lang
+                0x00004e10                _localeconv_r
+                0x00004e18                setlocale
+                0x00004e28                localeconv
+ .text          0x00004e30       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-malloc.o)
+                0x00004e30                malloc
+                0x00004e40                free
+ .text          0x00004e50      0x57c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o)
+                0x00004e50                _malloc_r
+ .text          0x000053cc       0x88 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memchr.o)
+                0x000053cc                memchr
+ .text          0x00005454      0x150 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memcpy.o)
+                0x00005454                memcpy
+ .text          0x000055a4        0x8 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mlock.o)
+                0x000055a4                __malloc_lock
+                0x000055a8                __malloc_unlock
+ .text          0x000055ac      0x920 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o)
+                0x000055ac                _Balloc
+                0x00005614                _Bfree
+                0x0000564c                __multadd
+                0x000056d0                __s2b
+                0x00005764                __hi0bits
+                0x000057a4                __lo0bits
+                0x00005808                __i2b
+                0x0000581c                __multiply
+                0x00005944                __pow5mult
+                0x000059e8                __lshift
+                0x00005a94                __mcmp
+                0x00005ad0                __mdiff
+                0x00005bc8                __ulp
+                0x00005c10                __b2d
+                0x00005cbc                __d2b
+                0x00005d84                __ratio
+                0x00005df4                _mprec_log10
+                0x00005e28                __copybits
+                0x00005e70                __any_on
+ .text          0x00005ecc       0x90 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-s_fpclassify.o)
+                0x00005ecc                __fpclassifyd
+ .text          0x00005f5c       0x28 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o)
+                0x00005f5c                _sbrk_r
+ .text          0x00005f84      0x1dc /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcmp.o)
+                0x00005f84                strcmp
+ .text          0x00006160      0xbe4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+                0x00006160                __ssprint_r
+                0x00006268                _svfiprintf_r
+ .text          0x00006d44       0x5c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-callocr.o)
+                0x00006d44                _calloc_r
+ .text          0x00006da0      0x240 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-freer.o)
+                0x00006da0                _malloc_trim_r
+                0x00006e48                _free_r
+ .text          0x00006fe0       0xa0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memmove.o)
+                0x00006fe0                memmove
+ .text          0x00007080       0xb4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memset.o)
+                0x00007080                memset
+ .text          0x00007134      0x41c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reallocr.o)
+                0x00007134                _realloc_r
+ .text          0x00007550      0x114 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+                0x00007550                cleanup_glue
+                0x0000756c                _reclaim_reent
+                0x0000762c                _wrapup_reent
+ *fill*         0x00007664        0x4 00
+ .text          0x00007668      0x278 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivsi3.o)
+                0x00007668                __udivsi3
+                0x00007668                __aeabi_uidiv
+                0x000078c4                __aeabi_uidivmod
+ .text          0x000078e0        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_dvmd_tls.o)
+                0x000078e0                __aeabi_ldiv0
+                0x000078e0                __aeabi_idiv0
+ .text          0x000078e4      0x370 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_addsubdf3.o)
+                0x000078e4                __aeabi_drsub
+                0x000078ec                __aeabi_dsub
+                0x000078ec                __subdf3
+                0x000078f0                __adddf3
+                0x000078f0                __aeabi_dadd
+                0x00007b68                __aeabi_ui2d
+                0x00007b68                __floatunsidf
+                0x00007b88                __floatsidf
+                0x00007b88                __aeabi_i2d
+                0x00007bac                __extendsfdf2
+                0x00007bac                __aeabi_f2d
+                0x00007be8                __aeabi_ul2d
+                0x00007be8                __floatundidf
+                0x00007bf8                __floatdidf
+                0x00007bf8                __aeabi_l2d
+ .text          0x00007c54      0x424 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_muldivdf3.o)
+                0x00007c54                __aeabi_dmul
+                0x00007c54                __muldf3
+                0x00007ea8                __aeabi_ddiv
+                0x00007ea8                __divdf3
+ .text          0x00008078      0x110 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_cmpdf2.o)
+                0x00008078                __gtdf2
+                0x00008078                __gedf2
+                0x00008080                __ltdf2
+                0x00008080                __ledf2
+                0x00008088                __cmpdf2
+                0x00008088                __eqdf2
+                0x00008088                __nedf2
+                0x00008104                __aeabi_cdrcmple
+                0x00008114                __aeabi_cdcmple
+                0x00008114                __aeabi_cdcmpeq
+                0x00008124                __aeabi_dcmpeq
+                0x00008138                __aeabi_dcmplt
+                0x0000814c                __aeabi_dcmple
+                0x00008160                __aeabi_dcmpge
+                0x00008174                __aeabi_dcmpgt
+ .text          0x00008188       0x50 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_fixdfsi.o)
+                0x00008188                __fixdfsi
+                0x00008188                __aeabi_d2iz
+ .text          0x000081d8       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
+                0x000081d8                __aeabi_uldivmod
+ .text          0x00008204       0x60 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o)
+                0x00008204                __gnu_ldivmod_helper
+                0x00008234                __gnu_uldivmod_helper
+ .text          0x00008264      0xc14 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+                0x00008548                _Unwind_VRS_Get
+                0x00008594                _Unwind_VRS_Set
+                0x00008900                __aeabi_unwind_cpp_pr2
+                0x00008904                __aeabi_unwind_cpp_pr1
+                0x00008908                __aeabi_unwind_cpp_pr0
+                0x0000890c                _Unwind_VRS_Pop
+                0x00008cf4                _Unwind_GetCFA
+                0x00008cf8                __gnu_Unwind_RaiseException
+                0x00008d68                __gnu_Unwind_ForcedUnwind
+                0x00008d80                __gnu_Unwind_Resume
+                0x00008dbc                __gnu_Unwind_Resume_or_Rethrow
+                0x00008dd4                _Unwind_Complete
+                0x00008dd8                _Unwind_DeleteException
+                0x00008de8                __gnu_Unwind_Backtrace
+ .text          0x00008e78      0x1ac /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(libunwind.o)
+                0x00008e78                __restore_core_regs
+                0x00008e78                restore_core_regs
+                0x00008e90                __gnu_Unwind_Restore_VFP
+                0x00008e98                __gnu_Unwind_Save_VFP
+                0x00008ea0                __gnu_Unwind_Restore_VFP_D
+                0x00008ea8                __gnu_Unwind_Save_VFP_D
+                0x00008eb0                __gnu_Unwind_Restore_VFP_D_16_to_31
+                0x00008eb8                __gnu_Unwind_Save_VFP_D_16_to_31
+                0x00008ec0                __gnu_Unwind_Restore_WMMXD
+                0x00008f04                __gnu_Unwind_Save_WMMXD
+                0x00008f48                __gnu_Unwind_Restore_WMMXC
+                0x00008f5c                __gnu_Unwind_Save_WMMXC
+                0x00008f70                ___Unwind_RaiseException
+                0x00008f70                _Unwind_RaiseException
+                0x00008f94                ___Unwind_Resume
+                0x00008f94                _Unwind_Resume
+                0x00008fb8                _Unwind_Resume_or_Rethrow
+                0x00008fb8                ___Unwind_Resume_or_Rethrow
+                0x00008fdc                ___Unwind_ForcedUnwind
+                0x00008fdc                _Unwind_ForcedUnwind
+                0x00009000                _Unwind_Backtrace
+                0x00009000                ___Unwind_Backtrace
+ .text          0x00009024      0x3b4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+                0x00009078                __gnu_unwind_execute
+                0x0000937c                __gnu_unwind_frame
+                0x000093a8                _Unwind_GetRegionStart
+                0x000093b4                _Unwind_GetLanguageSpecificData
+                0x000093c8                _Unwind_GetDataRelBase
+                0x000093d0                _Unwind_GetTextRelBase
+ .text          0x000093d8      0x364 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+                0x000093d8                __divdi3
+ .text          0x0000973c      0x314 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+                0x0000973c                __udivdi3
+ .text          0x00009a50       0x10 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o)
+                0x00009a50                abort
+ .text          0x00009a60      0x154 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signal.o)
+                0x00009a60                _init_signal_r
+                0x00009a90                _signal_r
+                0x00009acc                _raise_r
+                0x00009b24                __sigtramp_r
+                0x00009b78                raise
+                0x00009b88                signal
+                0x00009b98                _init_signal
+                0x00009ba4                __sigtramp
+ .text          0x00009bb4       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o)
+                0x00009bb4                _kill_r
+                0x00009be0                _getpid_r
+ .text          0x00009be4       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+                0x00009be4                __cs3_premain
+ .text.cs3.init
+                0x00009c14       0x50 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+                0x00009c14                __cs3_start_c
+ .text          0x00009c64        0x2 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_exit.o)
+                0x00009c64                _exit
+ .text          0x00009c66        0xa /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_kill.o)
+                0x00009c66                _kill
+ .text          0x00009c70       0x40 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o)
+                0x00009c70                _sbrk
+ .text          0x00009cb0        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_getpid.o)
+                0x00009cb0                _getpid
+ .text          0x00009cb4        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .text.cs3.init
+                0x00009cb4       0x10 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+                0x00009cb4                _start
+ .text          0x00009cc4        0xc /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+                0x00009cc4                __errno
+ .text          0x00009cd0       0x50 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+                0x00009cd0                __libc_init_array
+ .text          0x00009d20        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(heap.o)
+ .text          0x00009d20        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .text.ADC_Init
+                0x00009d20       0xa4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009d20                ADC_Init
+ .text.ADC_DeInit
+                0x00009dc4       0x48 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009dc4                ADC_DeInit
+ .text.ADC_GetData
+                0x00009e0c       0x38 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009e0c                ADC_GetData
+ .text.ADC_StartCmd
+                0x00009e44       0x90 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009e44                ADC_StartCmd
+ .text.ADC_BurstCmd
+                0x00009ed4       0x50 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009ed4                ADC_BurstCmd
+ .text.ADC_PowerdownCmd
+                0x00009f24       0x50 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009f24                ADC_PowerdownCmd
+ .text.ADC_EdgeStartConfig
+                0x00009f74       0x6c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009f74                ADC_EdgeStartConfig
+ .text.ADC_IntConfig
+                0x00009fe0       0xb4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x00009fe0                ADC_IntConfig
+ .text.ADC_ChannelCmd
+                0x0000a094       0x70 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x0000a094                ADC_ChannelCmd
+ .text.ADC_ChannelGetData
+                0x0000a104       0x58 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x0000a104                ADC_ChannelGetData
+ .text.ADC_ChannelGetStatus
+                0x0000a15c       0x8c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x0000a15c                ADC_ChannelGetStatus
+ .text.ADC_GlobalGetData
+                0x0000a1e8       0x34 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x0000a1e8                ADC_GlobalGetData
+ .text.ADC_GlobalGetStatus
+                0x0000a21c       0x7c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                0x0000a21c                ADC_GlobalGetStatus
+ .text          0x0000a298        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .text.CLKPWR_SetPCLKDiv
+                0x0000a298       0xd4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a298                CLKPWR_SetPCLKDiv
+ .text.CLKPWR_GetPCLKSEL
+                0x0000a36c       0x54 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a36c                CLKPWR_GetPCLKSEL
+ .text.CLKPWR_GetPCLK
+                0x0000a3c0       0x70 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a3c0                CLKPWR_GetPCLK
+ .text.CLKPWR_ConfigPPWR
+                0x0000a430       0x80 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a430                CLKPWR_ConfigPPWR
+ .text.CLKPWR_Sleep
+                0x0000a4b0       0x1c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a4b0                CLKPWR_Sleep
+ .text.CLKPWR_DeepSleep
+                0x0000a4cc       0x2c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a4cc                CLKPWR_DeepSleep
+ .text.CLKPWR_PowerDown
+                0x0000a4f8       0x2c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a4f8                CLKPWR_PowerDown
+ .text.CLKPWR_DeepPowerDown
+                0x0000a524       0x2c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                0x0000a524                CLKPWR_DeepPowerDown
+ .text          0x0000a550        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .text.DAC_Init
+                0x0000a550       0x40 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+                0x0000a550                DAC_Init
+ .text.DAC_UpdateValue
+                0x0000a590       0x58 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+                0x0000a590                DAC_UpdateValue
+ .text.DAC_SetBias
+                0x0000a5e8       0x4c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+                0x0000a5e8                DAC_SetBias
+ .text.DAC_ConfigDAConverterControl
+                0x0000a634       0x78 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+                0x0000a634                DAC_ConfigDAConverterControl
+ .text.DAC_SetDMATimeOut
+                0x0000a6ac       0x38 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+                0x0000a6ac                DAC_SetDMATimeOut
+ .text          0x0000a6e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.NVIC_EnableIRQ
+                0x0000a6e4       0x38 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.NVIC_DisableIRQ
+                0x0000a71c       0x3c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.I2C_getNum
+                0x0000a758       0x54 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.I2C_Start
+                0x0000a7ac       0x44 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.I2C_Stop
+                0x0000a7f0       0x38 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.I2C_SendByte
+                0x0000a828       0x50 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.I2C_GetByte
+                0x0000a878       0x5c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.I2C_SetClock
+                0x0000a8d4       0xc8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .text.I2C_Init
+                0x0000a99c       0xd8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000a99c                I2C_Init
+ .text.I2C_DeInit
+                0x0000aa74       0xa4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000aa74                I2C_DeInit
+ .text.I2C_Cmd  0x0000ab18       0x84 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000ab18                I2C_Cmd
+ .text.I2C_IntCmd
+                0x0000ab9c       0xa8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000ab9c                I2C_IntCmd
+ .text.I2C_MasterHandler
+                0x0000ac44      0x3d8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000ac44                I2C_MasterHandler
+ .text.I2C_SlaveHandler
+                0x0000b01c      0x1d8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000b01c                I2C_SlaveHandler
+ .text.I2C_MasterTransferData
+                0x0000b1f4      0x33c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000b1f4                I2C_MasterTransferData
+ .text.I2C_SlaveTransferData
+                0x0000b530      0x268 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000b530                I2C_SlaveTransferData
+ .text.I2C_SetOwnSlaveAddr
+                0x0000b798      0x118 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000b798                I2C_SetOwnSlaveAddr
+ .text.I2C_MonitorModeConfig
+                0x0000b8b0       0x9c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000b8b0                I2C_MonitorModeConfig
+ .text.I2C_MonitorModeCmd
+                0x0000b94c       0xb0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000b94c                I2C_MonitorModeCmd
+ .text.I2C_MonitorGetDatabuffer
+                0x0000b9fc       0x54 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000b9fc                I2C_MonitorGetDatabuffer
+ .text.I2C_MonitorHandler
+                0x0000ba50       0x6c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000ba50                I2C_MonitorHandler
+ .text.I2C_MasterTransferComplete
+                0x0000babc       0x40 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000babc                I2C_MasterTransferComplete
+ .text.I2C_SlaveTransferComplete
+                0x0000bafc       0x40 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                0x0000bafc                I2C_SlaveTransferComplete
+ .text          0x0000bb3c        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .text.check_failed
+                0x0000bb3c        0xc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+                0x0000bb3c                check_failed
+ .text          0x0000bb48        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .text.set_PinFunc
+                0x0000bb48       0xa0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .text.set_ResistorMode
+                0x0000bbe8       0xa0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .text.set_OpenDrainMode
+                0x0000bc88       0x80 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .text.PINSEL_ConfigTraceFunc
+                0x0000bd08       0x54 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+                0x0000bd08                PINSEL_ConfigTraceFunc
+ .text.PINSEL_SetI2C0Pins
+                0x0000bd5c       0x3c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+                0x0000bd5c                PINSEL_SetI2C0Pins
+ .text.PINSEL_ConfigPin
+                0x0000bd98       0x54 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+                0x0000bd98                PINSEL_ConfigPin
+ .text          0x0000bdec        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+ .text.uart_set_divisors
+                0x0000bdec      0x26c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+ .text.UART_Init
+                0x0000c058      0x368 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c058                UART_Init
+ .text.UART_DeInit
+                0x0000c3c0       0xcc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c3c0                UART_DeInit
+ .text.UART_ConfigStructInit
+                0x0000c48c       0x34 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c48c                UART_ConfigStructInit
+ .text.UART_SendByte
+                0x0000c4c0       0x78 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c4c0                UART_SendByte
+ .text.UART_ReceiveByte
+                0x0000c538       0x78 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c538                UART_ReceiveByte
+ .text.UART_Send
+                0x0000c5b0      0x10c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c5b0                UART_Send
+ .text.UART_Receive
+                0x0000c6bc       0xd8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c6bc                UART_Receive
+ .text.UART_ForceBreak
+                0x0000c794       0x88 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c794                UART_ForceBreak
+ .text.UART_IntConfig
+                0x0000c81c      0x1d0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c81c                UART_IntConfig
+ .text.UART_GetLineStatus
+                0x0000c9ec       0x7c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000c9ec                UART_GetLineStatus
+ .text.UART_GetIntId
+                0x0000ca68       0x68 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000ca68                UART_GetIntId
+ .text.UART_CheckBusy
+                0x0000cad0       0x2c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000cad0                UART_CheckBusy
+ .text.UART_FIFOConfig
+                0x0000cafc      0x184 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000cafc                UART_FIFOConfig
+ .text.UART_FIFOConfigStructInit
+                0x0000cc80       0x34 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000cc80                UART_FIFOConfigStructInit
+ .text.UART_ABCmd
+                0x0000ccb4      0x15c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000ccb4                UART_ABCmd
+ .text.UART_ABClearIntPending
+                0x0000ce10       0x88 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000ce10                UART_ABClearIntPending
+ .text.UART_TxCmd
+                0x0000ce98       0xe8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000ce98                UART_TxCmd
+ .text.UART_IrDAInvtInputCmd
+                0x0000cf80       0x84 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000cf80                UART_IrDAInvtInputCmd
+ .text.UART_IrDACmd
+                0x0000d004       0x80 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d004                UART_IrDACmd
+ .text.UART_IrDAPulseDivConfig
+                0x0000d084       0xac /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d084                UART_IrDAPulseDivConfig
+ .text.UART_FullModemForcePinState
+                0x0000d130       0xcc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d130                UART_FullModemForcePinState
+ .text.UART_FullModemConfigMode
+                0x0000d1fc       0xd8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d1fc                UART_FullModemConfigMode
+ .text.UART_FullModemGetStatus
+                0x0000d2d4       0x38 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d2d4                UART_FullModemGetStatus
+ .text.UART_RS485Config
+                0x0000d30c      0x1bc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d30c                UART_RS485Config
+ .text.UART_RS485ReceiverCmd
+                0x0000d4c8       0x48 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d4c8                UART_RS485ReceiverCmd
+ .text.UART_RS485Send
+                0x0000d510       0x84 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d510                UART_RS485Send
+ .text.UART_RS485SendSlvAddr
+                0x0000d594       0x28 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d594                UART_RS485SendSlvAddr
+ .text.UART_RS485SendData
+                0x0000d5bc       0x28 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                0x0000d5bc                UART_RS485SendData
+ .text          0x0000d5e4        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .text          0x0000d5e4        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+ *(.plt)
+ *(.gnu.warning)
+ .gnu.warning   0x00000000        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_kill.o)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000d5e4      0x19c main.o
+ .rodata._ZZ4mainE3C.0
+                0x0000d780        0x4 main.o
+ .rodata        0x0000d784       0x14 lib/display.o
+ .rodata._ZZ13setup_displayvE3C.2
+                0x0000d798        0xc lib/display.o
+ .rodata._ZZ5resetvE3C.3
+                0x0000d7a4        0x4 lib/display.o
+ .rodata        0x0000d7a8       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+ .rodata.str1.4
+                0x0000d7c8       0x42 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+                                 0x44 (size before relaxing)
+ *fill*         0x0000d80a        0x2 00
+ .rodata        0x0000d80c      0x104 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-ctype_.o)
+                0x0000d80c                _ctype_
+ .rodata.str1.4
+                0x0000d910       0x10 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o)
+                                 0x14 (size before relaxing)
+ .rodata        0x0000d920        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-impure.o)
+                0x0000d920                _global_impure_ptr
+ .rodata.str1.4
+                0x0000d924        0x2 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-impure.o)
+                                  0x4 (size before relaxing)
+ *fill*         0x0000d926        0x2 00
+ .rodata.str1.4
+                0x0000d928        0xc /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o)
+                                 0x14 (size before relaxing)
+ *fill*         0x0000d934        0x4 00
+ .rodata        0x0000d938      0x128 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o)
+                0x0000d948                __mprec_tens
+                0x0000da10                __mprec_bigtens
+                0x0000da38                __mprec_tinytens
+ .rodata        0x0000da60       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+ .rodata.str1.4
+                0x00000000       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+ .rodata        0x0000da80       0x10 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .rodata        0x0000da90       0x10 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .rodata        0x0000daa0       0x10 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .rodata        0x0000dab0       0x10 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ .ARM.extab.text._ZN6SerialC2Ev
+                0x0000dac0        0xc lib/serial.o
+ .ARM.extab.text._ZN6Serial4initEv
+                0x0000dacc        0xc lib/serial.o
+ .ARM.extab.text._ZN6Serial6printfEPcz
+                0x0000dad8       0x10 lib/serial.o
+ .ARM.extab.text._ZN6Serial5writeEPc
+                0x0000dae8        0xc lib/serial.o
+ .ARM.extab.text._Z7pinconf15PINSEL_CFG_Type
+                0x0000daf4        0xc lib/pindef.o
+ .ARM.extab.text._Z8myactioni
+                0x0000db00        0xc main.o
+ .ARM.extab.text._Z4menui
+                0x0000db0c        0xc main.o
+ .ARM.extab.text._Z13packet_vieweri
+                0x0000db18        0xc main.o
+ .ARM.extab.text._Z11grab_packetv
+                0x0000db24        0xc main.o
+ .ARM.extab.text._Z22capture_packet_triggerv
+                0x0000db30        0xc main.o
+ .ARM.extab.text._Z14wait_for_breakv
+                0x0000db3c        0xc main.o
+ .ARM.extab.text.main
+                0x0000db48        0xc main.o
+ .ARM.extab.text._Z41__static_initialization_and_destruction_0ii
+                0x0000db54        0x0 main.o
+ .ARM.extab.text._GLOBAL__I_labels
+                0x0000db54        0x0 main.o
+ .ARM.extab.text._ZN3I2CC2E15PINSEL_CFG_TypeS0_
+                0x0000db54        0xc lib/i2c.o
+ .ARM.extab.text._ZN3I2C4initEv
+                0x0000db60        0xc lib/i2c.o
+ .ARM.extab.text._ZN3I2C5writeEmPhm
+                0x0000db6c        0xc lib/i2c.o
+ .ARM.extab.text._ZN3I2C4readEmPhm
+                0x0000db78        0xc lib/i2c.o
+ .ARM.extab.text._Z5resetv
+                0x0000db84        0xc lib/display.o
+ .ARM.extab.text._Z13setup_displayv
+                0x0000db90        0xc lib/display.o
+ .ARM.extab.text._Z11return_homev
+                0x0000db9c        0xc lib/display.o
+ .ARM.extab.text._Z10shift_linev
+                0x0000dba8        0xc lib/display.o
+ .ARM.extab.text._Z12cursor_shift10Shift_Typei
+                0x0000dbb4        0xc lib/display.o
+ .ARM.extab.text._Z9printcharc
+                0x0000dbc0        0xc lib/display.o
+ .ARM.extab.text._Z9putcustomc
+                0x0000dbcc        0xc lib/display.o
+ .ARM.extab.text._Z8printstrPc
+                0x0000dbd8        0xc lib/display.o
+ .ARM.extab.text._Z13clear_displayv
+                0x0000dbe4        0x0 lib/display.o
+ .ARM.extab.text._Z8checkrowcciPFviE
+                0x0000dbe4        0xc lib/keypad.o
+ .ARM.extab.text._Z12keypad_checkPFviE
+                0x0000dbf0        0xc lib/keypad.o
+ .ARM.extab.text._ZN8AnalogInC2E15PINSEL_CFG_Type
+                0x0000dbfc        0xc lib/analog.o
+ .ARM.extab.text._ZN9AnalogOutC2E15PINSEL_CFG_Type
+                0x0000dc08        0xc lib/analog.o
+ .ARM.extab.text._ZN8AnalogIn4initEv
+                0x0000dc14        0xc lib/analog.o
+ .ARM.extab.text._ZN9AnalogOut4initEv
+                0x0000dc20        0xc lib/analog.o
+ .ARM.extab.text._ZN8AnalogIn4readEv
+                0x0000dc2c        0xc lib/analog.o
+ .ARM.extab.text._ZN9AnalogOut5writeEm
+                0x0000dc38        0xc lib/analog.o
+ .ARM.extab.text._ZN3DMXC2Ev
+                0x0000dc44        0xc lib/serial-dmx.o
+ .ARM.extab.text._ZN3DMX4initEv
+                0x0000dc50        0xc lib/serial-dmx.o
+ .ARM.extab.text._ZN3DMX4sendEPci
+                0x0000dc5c        0xc lib/serial-dmx.o
+ .ARM.extab.text._ZN3DMX5writeEPci
+                0x0000dc68        0xc lib/serial-dmx.o
+ .ARM.extab.text._ZN3DMX4readEPh
+                0x0000dc74        0xc lib/serial-dmx.o
+ .ARM.extab.text._ZN3DMX10send_breakEv
+                0x0000dc80        0x0 lib/serial-dmx.o
+ .ARM.extab.text._ZN3DMX9end_breakEv
+                0x0000dc80        0x0 lib/serial-dmx.o
+ .ARM.extab.text._Z5delayi
+                0x0000dc80        0x0 lib/utilities.o
+ .ARM.extab.cs3.reset
+                0x0000dc80        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .ARM.extab     0x0000dc80       0x18 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+ .ARM.extab     0x0000dc98       0x18 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+ .ARM.extab     0x0000dcb0        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+ .ARM.extab     0x0000dcb0        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+ *(.gcc_except_table)
+ *(.eh_frame_hdr)
+ *(.eh_frame)
+                0x0000dcb0                . = ALIGN (0x4)
+ *(.init)
+ .init          0x0000dcb0        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+                0x0000dcb0                _init
+ .init          0x0000dcb4        0x8 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+                0x0000dcbc                . = ALIGN (0x4)
+                0x0000dcbc                __preinit_array_start = .
+ *(.preinit_array)
+                0x0000dcbc                __preinit_array_end = .
+                0x0000dcbc                . = ALIGN (0x4)
+                0x0000dcbc                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x0000dcbc        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .init_array    0x0000dcc0        0x4 main.o
+                0x0000dcc4                __init_array_end = .
+                0x0000dcc4                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x0000dcc4                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x0000dcc4        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+                0x0000dcc4                _fini
+ .fini          0x0000dcc8        0x8 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+                0x0000dcd0                . = ALIGN (0x4)
+                0x0000dcd0                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x0000dcd0        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x0000dcd4                __fini_array_end = .
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x0000dcd4                . = ALIGN (0x4)
+                0x0000dcd4                __cs3_regions = .
+                0x0000dcd4        0x4 LONG 0x0
+                0x0000dcd8        0x4 LONG 0xdee8 __cs3_region_init_ram
+                0x0000dcdc        0x4 LONG 0x10000000 __cs3_region_start_ram
+                0x0000dce0        0x4 LONG 0x5e8 __cs3_region_init_size_ram
+                0x0000dce4        0x4 LONG 0x2c8 __cs3_region_zero_size_ram
+                0x0000dce8                __exidx_start = .
+
+.v4_bx          0x0000dce8        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.ARM.exidx      0x0000dce8      0x200
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx.text._ZN6SerialC2Ev
+                0x0000dcf0        0x8 lib/serial.o
+ .ARM.exidx.text._ZN6Serial4initEv
+                0x0000dcf8        0x8 lib/serial.o
+ .ARM.exidx.text._ZN6Serial6printfEPcz
+                0x0000dd00        0x8 lib/serial.o
+ .ARM.exidx.text._ZN6Serial5writeEPc
+                0x0000dd08        0x8 lib/serial.o
+ .ARM.exidx.text._Z7pinconf15PINSEL_CFG_Type
+                0x0000dd10        0x8 lib/pindef.o
+ .ARM.exidx.text._Z8myactioni
+                0x0000dd18        0x8 main.o
+ .ARM.exidx.text._Z4menui
+                0x0000dd20        0x8 main.o
+ .ARM.exidx.text._Z13packet_vieweri
+                0x0000dd28        0x8 main.o
+ .ARM.exidx.text._Z11grab_packetv
+                0x0000dd30        0x8 main.o
+ .ARM.exidx.text._Z22capture_packet_triggerv
+                0x0000dd38        0x8 main.o
+ .ARM.exidx.text._Z14wait_for_breakv
+                0x0000dd40        0x8 main.o
+ .ARM.exidx.text.main
+                0x0000dd48        0x8 main.o
+ .ARM.exidx.text._Z41__static_initialization_and_destruction_0ii
+                0x0000dd50        0x8 main.o
+ .ARM.exidx.text._GLOBAL__I_labels
+                0x0000dd58        0x0 main.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._ZN3I2CC2E15PINSEL_CFG_TypeS0_
+                0x0000dd58        0x8 lib/i2c.o
+ .ARM.exidx.text._ZN3I2C4initEv
+                0x0000dd60        0x8 lib/i2c.o
+ .ARM.exidx.text._ZN3I2C5writeEmPhm
+                0x0000dd68        0x8 lib/i2c.o
+ .ARM.exidx.text._ZN3I2C4readEmPhm
+                0x0000dd70        0x8 lib/i2c.o
+ .ARM.exidx.text._Z5resetv
+                0x0000dd78        0x8 lib/display.o
+ .ARM.exidx.text._Z13setup_displayv
+                0x0000dd80        0x8 lib/display.o
+ .ARM.exidx.text._Z11return_homev
+                0x0000dd88        0x8 lib/display.o
+ .ARM.exidx.text._Z10shift_linev
+                0x0000dd90        0x8 lib/display.o
+ .ARM.exidx.text._Z12cursor_shift10Shift_Typei
+                0x0000dd98        0x8 lib/display.o
+ .ARM.exidx.text._Z9printcharc
+                0x0000dda0        0x8 lib/display.o
+ .ARM.exidx.text._Z9putcustomc
+                0x0000dda8        0x8 lib/display.o
+ .ARM.exidx.text._Z8printstrPc
+                0x0000ddb0        0x8 lib/display.o
+ .ARM.exidx.text._Z13clear_displayv
+                0x0000ddb8        0x8 lib/display.o
+ .ARM.exidx.text._Z8checkrowcciPFviE
+                0x0000ddc0        0x8 lib/keypad.o
+ .ARM.exidx.text._Z12keypad_checkPFviE
+                0x0000ddc8        0x8 lib/keypad.o
+ .ARM.exidx.text._ZN8AnalogInC2E15PINSEL_CFG_Type
+                0x0000ddd0        0x8 lib/analog.o
+ .ARM.exidx.text._ZN9AnalogOutC2E15PINSEL_CFG_Type
+                0x0000ddd8        0x8 lib/analog.o
+ .ARM.exidx.text._ZN8AnalogIn4initEv
+                0x0000dde0        0x8 lib/analog.o
+ .ARM.exidx.text._ZN9AnalogOut4initEv
+                0x0000dde8        0x8 lib/analog.o
+ .ARM.exidx.text._ZN8AnalogIn4readEv
+                0x0000ddf0        0x8 lib/analog.o
+ .ARM.exidx.text._ZN9AnalogOut5writeEm
+                0x0000ddf8        0x8 lib/analog.o
+ .ARM.exidx.text._ZN3DMXC2Ev
+                0x0000de00        0x8 lib/serial-dmx.o
+ .ARM.exidx.text._ZN3DMX4initEv
+                0x0000de08        0x8 lib/serial-dmx.o
+ .ARM.exidx.text._ZN3DMX4sendEPci
+                0x0000de10        0x8 lib/serial-dmx.o
+ .ARM.exidx.text._ZN3DMX5writeEPci
+                0x0000de18        0x8 lib/serial-dmx.o
+ .ARM.exidx.text._ZN3DMX4readEPh
+                0x0000de20        0x8 lib/serial-dmx.o
+ .ARM.exidx.text._ZN3DMX10send_breakEv
+                0x0000de28        0x8 lib/serial-dmx.o
+ .ARM.exidx.text._ZN3DMX9end_breakEv
+                0x0000de30        0x0 lib/serial-dmx.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z5delayi
+                0x0000de30        0x0 lib/utilities.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.cs3.reset
+                0x0000dce8        0x8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .ARM.exidx     0x0000de30       0x80 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+                                 0xc0 (size before relaxing)
+ .ARM.exidx     0x0000deb0       0x38 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+                                 0x48 (size before relaxing)
+ .ARM.exidx     0x0000dee8        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+                                  0x8 (size before relaxing)
+ .ARM.exidx     0x0000dee8        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+                                  0x8 (size before relaxing)
+                0x0000dee8                __exidx_end = .
+
+.text.align     0x0000dee8        0x0
+                0x0000dee8                . = ALIGN (0x8)
+                0x0000dee8                _etext = .
+                0x00080000                __cs3_region_size_rom = 0x80000
+                0x00000001                __cs3_region_num = 0x1
+
+.data           0x10000000      0x5e8 load address 0x0000dee8
+                0x10000000                __cs3_region_start_ram = .
+ *(.cs3.region-head.ram)
+ *(.jcr)
+ .jcr           0x10000000        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .jcr           0x10000000        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x10000004        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .data          0x10000004        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+                0x10000004                __dso_handle
+ .data          0x10000008        0x0 lib/serial.o
+ .data          0x10000008        0x0 lib/pindef.o
+ .data.USBTX    0x10000008        0x8 lib/pindef.o
+                0x10000008                USBTX
+ .data.USBRX    0x10000010        0x8 lib/pindef.o
+                0x10000010                USBRX
+ .data.SERIALTX
+                0x10000018        0x8 lib/pindef.o
+                0x10000018                SERIALTX
+ .data.SERIALRX
+                0x10000020        0x8 lib/pindef.o
+                0x10000020                SERIALRX
+ .data.SDA      0x10000028        0x8 lib/pindef.o
+                0x10000028                SDA
+ .data.SCL      0x10000030        0x8 lib/pindef.o
+                0x10000030                SCL
+ .data          0x10000038        0x0 main.o
+ .data.labels   0x10000038       0x10 main.o
+                0x10000038                labels
+ .data.packet_index
+                0x10000048        0x4 main.o
+                0x10000048                packet_index
+ .data.break_code
+                0x1000004c        0x4 main.o
+                0x1000004c                break_code
+ .data          0x10000050        0x0 lib/i2c.o
+ .data          0x10000050        0x0 lib/display.o
+ .data          0x10000050        0x0 lib/keypad.o
+ .data.masks    0x10000050        0x4 lib/keypad.o
+                0x10000050                masks
+ .data          0x10000054        0x0 lib/analog.o
+ .data          0x10000054        0x0 lib/serial-dmx.o
+ .data          0x10000054        0x0 lib/utilities.o
+ .data          0x10000054        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .data          0x10000054        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .data.SystemCoreClock
+                0x10000054        0x4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                0x10000054                SystemCoreClock
+ .data          0x10000058        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-atoi.o)
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o)
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcat.o)
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcpy.o)
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strlen.o)
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o)
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+ .data          0x10000058        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-vsprintf.o)
+ .data          0x10000058        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-ctype_.o)
+                0x10000058                __ctype_ptr__
+ .data          0x1000005c        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o)
+ .data          0x1000005c       0xf4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-impure.o)
+                0x1000005c                _impure_ptr
+ .data          0x10000150       0x7c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o)
+                0x10000170                __mb_cur_max
+ .data          0x100001cc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-malloc.o)
+ .data          0x100001cc      0x410 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o)
+                0x100001cc                __malloc_av_
+                0x100005d4                __malloc_sbrk_base
+                0x100005d8                __malloc_trim_threshold
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memchr.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memcpy.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mlock.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-s_fpclassify.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcmp.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-callocr.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-freer.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memmove.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memset.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reallocr.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivsi3.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_dvmd_tls.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_cmpdf2.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(libunwind.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signal.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_exit.o)
+ .data          0x100005dc        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_kill.o)
+ .data          0x100005dc        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o)
+ .data          0x100005e0        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_getpid.o)
+ .data          0x100005e0        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .data          0x100005e0        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .data          0x100005e0        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+ .data          0x100005e0        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(heap.o)
+                0x100005e0                __cs3_heap_limit
+ .data          0x100005e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .data          0x100005e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .data          0x100005e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .data          0x100005e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .data          0x100005e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .data          0x100005e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .data          0x100005e4        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+ .data          0x100005e4        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .data          0x100005e4        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+ *(.ram)
+                0x100005e8                . = ALIGN (0x8)
+ *fill*         0x100005e4        0x4 00
+                0x100005e8                _edata = .
+
+.bss            0x100005e8      0x2c8 load address 0x0000e4d0
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x100005e8        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .bss           0x100005e8        0x1 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .bss           0x100005e9        0x0 lib/serial.o
+ .bss           0x100005e9        0x0 lib/pindef.o
+ .bss           0x100005e9        0x0 main.o
+ *fill*         0x100005e9        0x3 00
+ .bss.i2c       0x100005ec        0x4 main.o
+                0x100005ec                i2c
+ .bss.pc        0x100005f0        0x4 main.o
+                0x100005f0                pc
+ .bss.dmx       0x100005f4        0x4 main.o
+                0x100005f4                dmx
+ .bss.state     0x100005f8        0x4 main.o
+                0x100005f8                state
+ .bss.total_packets
+                0x100005fc        0x4 main.o
+                0x100005fc                total_packets
+ .bss.trigger_slot
+                0x10000600        0x4 main.o
+                0x10000600                trigger_slot
+ .bss.packetmod
+                0x10000604        0x4 main.o
+                0x10000604                packetmod
+ .bss.inputmod  0x10000608        0x4 main.o
+                0x10000608                inputmod
+ .bss.input_hun
+                0x1000060c        0x4 main.o
+                0x1000060c                input_hun
+ .bss.input_ten
+                0x10000610        0x4 main.o
+                0x10000610                input_ten
+ .bss.packet    0x10000614      0x200 main.o
+                0x10000614                packet
+ .bss.strbuf    0x10000814       0x14 main.o
+                0x10000814                strbuf
+ .bss           0x10000828        0x0 lib/i2c.o
+ .bss           0x10000828        0x0 lib/display.o
+ .bss           0x10000828        0x0 lib/keypad.o
+ .bss.pressed   0x10000828       0x10 lib/keypad.o
+                0x10000828                pressed
+ .bss           0x10000838        0x0 lib/analog.o
+ .bss           0x10000838        0x0 lib/serial-dmx.o
+ .bss           0x10000838        0x0 lib/utilities.o
+ .bss           0x10000838        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .bss           0x10000838        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .bss           0x10000838        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-atoi.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcat.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcpy.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strlen.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-vsprintf.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-ctype_.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o)
+ .bss           0x10000838        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-impure.o)
+ .bss           0x10000838        0xc /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o)
+                0x10000838                __nlocale_changed
+                0x1000083c                __mlocale_changed
+                0x10000840                _PathLocale
+ .bss           0x10000844        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-malloc.o)
+ .bss           0x10000844       0x34 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o)
+                0x10000844                __malloc_top_pad
+                0x10000848                __malloc_current_mallinfo
+                0x10000870                __malloc_max_sbrked_mem
+                0x10000874                __malloc_max_total_mem
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memchr.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memcpy.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mlock.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-s_fpclassify.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcmp.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-callocr.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-freer.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memmove.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memset.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reallocr.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivsi3.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_dvmd_tls.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_cmpdf2.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(libunwind.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signal.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_exit.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_kill.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_getpid.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(heap.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .bss           0x10000878        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .bss.i2cdat    0x10000878       0x18 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .bss.I2C_MasterComplete
+                0x10000890        0xc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .bss.I2C_SlaveComplete
+                0x1000089c        0xc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .bss.I2C_MonitorBufferIndex
+                0x100008a8        0x4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .bss           0x100008ac        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .bss           0x100008ac        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .bss           0x100008ac        0x0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+ .bss           0x100008ac        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .bss           0x100008ac        0x0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+ *(COMMON)
+ COMMON         0x100008ac        0x4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+                0x100008ac                errno
+ *(.ram.b)
+                0x100008b0                . = ALIGN (0x8)
+                0x100008b0                _end = .
+                0x100008b0                __end = .
+
+.usb_ram
+ *.o(USB_RAM)
+
+.heap           0x100008b0     0x1000
+ *(.heap)
+ .heap          0x100008b0     0x1000 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x100008b0                __cs3_heap_start
+                0x100018b0                __cs3_heap_end
+
+.stack          0x10007f00      0x100
+ *(.stack)
+ .stack         0x10007f00      0x100 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+                0x10007f00                __cs3_stack_mem
+                0x10008000                _estack = .
+                0x10008000                PROVIDE (estack, .)
+                0x0000dee8                __cs3_region_init_ram = LOADADDR (.data)
+                0x000005e8                __cs3_region_init_size_ram = (_edata - __cs3_region_start_ram)
+                0x000002c8                __cs3_region_zero_size_ram = (_end - _edata)
+                0x00008000                __cs3_region_size_ram = 0x8000
+                0x00000001                __cs3_region_num = 0x1
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.comment        0x00000000       0x2a
+ .comment       0x00000000       0x2a lib/serial.o
+                                 0x2b (size before relaxing)
+ .comment       0x00000000       0x2b lib/pindef.o
+ .comment       0x00000000       0x2b main.o
+ .comment       0x00000000       0x2b lib/i2c.o
+ .comment       0x00000000       0x2b lib/display.o
+ .comment       0x00000000       0x2b lib/keypad.o
+ .comment       0x00000000       0x2b lib/analog.o
+ .comment       0x00000000       0x2b lib/serial-dmx.o
+ .comment       0x00000000       0x2b lib/utilities.o
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .comment       0x00000000       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_aranges  0x00000000      0x5d0
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x38 lib/serial.o
+ .debug_aranges
+                0x00000038       0x20 lib/pindef.o
+ .debug_aranges
+                0x00000058       0x60 main.o
+ .debug_aranges
+                0x000000b8       0x38 lib/i2c.o
+ .debug_aranges
+                0x000000f0       0x60 lib/display.o
+ .debug_aranges
+                0x00000150       0x28 lib/keypad.o
+ .debug_aranges
+                0x00000178       0x48 lib/analog.o
+ .debug_aranges
+                0x000001c0       0x50 lib/serial-dmx.o
+ .debug_aranges
+                0x00000210       0x20 lib/utilities.o
+ .debug_aranges
+                0x00000230       0x28 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_aranges
+                0x00000258       0x28 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .debug_aranges
+                0x00000280       0x80 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_aranges
+                0x00000300       0x58 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_aranges
+                0x00000358       0x40 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_aranges
+                0x00000398       0xd0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_aranges
+                0x00000468       0x20 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_aranges
+                0x00000488       0x48 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_aranges
+                0x000004d0      0x100 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_pubnames
+                0x00000000      0xb2d
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x5b lib/serial.o
+ .debug_pubnames
+                0x0000005b       0x5c lib/pindef.o
+ .debug_pubnames
+                0x000000b7      0x13d main.o
+ .debug_pubnames
+                0x000001f4       0x4a lib/i2c.o
+ .debug_pubnames
+                0x0000023e       0x99 lib/display.o
+ .debug_pubnames
+                0x000002d7       0x46 lib/keypad.o
+ .debug_pubnames
+                0x0000031d       0x91 lib/analog.o
+ .debug_pubnames
+                0x000003ae       0x7f lib/serial-dmx.o
+ .debug_pubnames
+                0x0000042d       0x1c lib/utilities.o
+ .debug_pubnames
+                0x00000449       0x4f /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_pubnames
+                0x00000498      0x110 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_pubnames
+                0x000005a8       0xbb /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_pubnames
+                0x00000663       0x7a /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_pubnames
+                0x000006dd      0x163 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_pubnames
+                0x00000840       0x23 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_pubnames
+                0x00000863       0x59 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_pubnames
+                0x000008bc      0x271 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_info     0x00000000     0x697b
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x63b lib/serial.o
+ .debug_info    0x0000063b      0x18a lib/pindef.o
+ .debug_info    0x000007c5      0xcd4 main.o
+ .debug_info    0x00001499      0x4eb lib/i2c.o
+ .debug_info    0x00001984      0x434 lib/display.o
+ .debug_info    0x00001db8      0x2e0 lib/keypad.o
+ .debug_info    0x00002098      0x51a lib/analog.o
+ .debug_info    0x000025b2      0x8e6 lib/serial-dmx.o
+ .debug_info    0x00002e98       0xd6 lib/utilities.o
+ .debug_info    0x00002f6e       0x68 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_info    0x00002fd6      0x509 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_info    0x000034df       0xc1 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .debug_info    0x000035a0      0x613 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_info    0x00003bb3      0x6c5 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_info    0x00004278      0x28c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_info    0x00004504      0xdac /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_info    0x000052b0       0xc9 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_info    0x00005379      0x4b5 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_info    0x0000582e     0x114d /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_abbrev   0x00000000     0x19b1
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x274 lib/serial.o
+ .debug_abbrev  0x00000274       0xb8 lib/pindef.o
+ .debug_abbrev  0x0000032c      0x2e0 main.o
+ .debug_abbrev  0x0000060c      0x1c1 lib/i2c.o
+ .debug_abbrev  0x000007cd      0x194 lib/display.o
+ .debug_abbrev  0x00000961      0x182 lib/keypad.o
+ .debug_abbrev  0x00000ae3      0x19e lib/analog.o
+ .debug_abbrev  0x00000c81      0x241 lib/serial-dmx.o
+ .debug_abbrev  0x00000ec2       0x90 lib/utilities.o
+ .debug_abbrev  0x00000f52       0x28 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_abbrev  0x00000f7a      0x102 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_abbrev  0x0000107c       0x12 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .debug_abbrev  0x0000108e      0x13d /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_abbrev  0x000011cb      0x195 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_abbrev  0x00001360       0xea /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_abbrev  0x0000144a      0x214 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_abbrev  0x0000165e       0x68 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_abbrev  0x000016c6      0x11d /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_abbrev  0x000017e3      0x1ce /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_line     0x00000000     0x2f37
+ *(.debug_line)
+ .debug_line    0x00000000      0x234 lib/serial.o
+ .debug_line    0x00000234      0x12d lib/pindef.o
+ .debug_line    0x00000361      0x4d2 main.o
+ .debug_line    0x00000833      0x1a0 lib/i2c.o
+ .debug_line    0x000009d3      0x21a lib/display.o
+ .debug_line    0x00000bed      0x193 lib/keypad.o
+ .debug_line    0x00000d80      0x1cf lib/analog.o
+ .debug_line    0x00000f4f      0x1f9 lib/serial-dmx.o
+ .debug_line    0x00001148      0x126 lib/utilities.o
+ .debug_line    0x0000126e       0x1d /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_line    0x0000128b      0x1e4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_line    0x0000146f       0xb1 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .debug_line    0x00001520      0x386 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_line    0x000018a6      0x29a /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_line    0x00001b40      0x20f /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_line    0x00001d4f      0x67c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_line    0x000023cb       0xc4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_line    0x0000248f      0x220 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_line    0x000026af      0x888 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_frame    0x00000000     0x1fcc
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x98 lib/serial.o
+ .debug_frame   0x00000098       0x30 lib/pindef.o
+ .debug_frame   0x000000c8      0x12c main.o
+ .debug_frame   0x000001f4       0x90 lib/i2c.o
+ .debug_frame   0x00000284      0x12c lib/display.o
+ .debug_frame   0x000003b0       0x50 lib/keypad.o
+ .debug_frame   0x00000400       0xd0 lib/analog.o
+ .debug_frame   0x000004d0       0xe8 lib/serial-dmx.o
+ .debug_frame   0x000005b8       0x2c lib/utilities.o
+ .debug_frame   0x000005e4       0x40 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_frame   0x00000624       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-atoi.o)
+ .debug_frame   0x00000654       0x64 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o)
+ .debug_frame   0x000006b8       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcat.o)
+ .debug_frame   0x000006e4       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcpy.o)
+ .debug_frame   0x00000704       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strlen.o)
+ .debug_frame   0x00000724       0x54 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o)
+ .debug_frame   0x00000778       0x3c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+ .debug_frame   0x000007b4       0x48 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-vsprintf.o)
+ .debug_frame   0x000007fc       0x68 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o)
+ .debug_frame   0x00000864       0x98 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o)
+ .debug_frame   0x000008fc       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-malloc.o)
+ .debug_frame   0x0000092c       0x3c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o)
+ .debug_frame   0x00000968       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memchr.o)
+ .debug_frame   0x00000994       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memcpy.o)
+ .debug_frame   0x000009c4       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mlock.o)
+ .debug_frame   0x000009f4      0x244 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o)
+ .debug_frame   0x00000c38       0x28 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-s_fpclassify.o)
+ .debug_frame   0x00000c60       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000c8c       0x30 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcmp.o)
+ .debug_frame   0x00000cbc       0x68 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+ .debug_frame   0x00000d24       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-callocr.o)
+ .debug_frame   0x00000d50       0x50 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-freer.o)
+ .debug_frame   0x00000da0       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memmove.o)
+ .debug_frame   0x00000dcc       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memset.o)
+ .debug_frame   0x00000df8       0x3c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reallocr.o)
+ .debug_frame   0x00000e34       0x64 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+ .debug_frame   0x00000e98       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000eb8       0x50 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o)
+ .debug_frame   0x00000f08      0x288 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+ .debug_frame   0x00001190       0xf4 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+ .debug_frame   0x00001284       0x3c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+ .debug_frame   0x000012c0       0x3c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+ .debug_frame   0x000012fc       0x28 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o)
+ .debug_frame   0x00001324       0xc0 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signal.o)
+ .debug_frame   0x000013e4       0x3c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o)
+ .debug_frame   0x00001420       0x40 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .debug_frame   0x00001460       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_exit.o)
+ .debug_frame   0x00001480       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_kill.o)
+ .debug_frame   0x000014a0       0x28 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o)
+ .debug_frame   0x000014c8       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_getpid.o)
+ .debug_frame   0x000014e8       0x20 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .debug_frame   0x00001508       0x2c /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+ .debug_frame   0x00001534      0x1ac /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_frame   0x000016e0       0xe4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_frame   0x000017c4       0xb0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_frame   0x00001874      0x2d0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_frame   0x00001b44       0x2c /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_frame   0x00001b70       0xbc /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_frame   0x00001c2c      0x3a0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_str      0x00000000     0x21a9
+ *(.debug_str)
+ .debug_str     0x00000000      0x419 lib/serial.o
+                                0x482 (size before relaxing)
+ .debug_str     0x00000419       0x76 lib/pindef.o
+                                0x16f (size before relaxing)
+ .debug_str     0x0000048f      0x2f0 main.o
+                                0x536 (size before relaxing)
+ .debug_str     0x0000077f      0x16c lib/i2c.o
+                                0x308 (size before relaxing)
+ .debug_str     0x000008eb      0x12d lib/display.o
+                                0x29a (size before relaxing)
+ .debug_str     0x00000a18       0x60 lib/keypad.o
+                                0x1d4 (size before relaxing)
+ .debug_str     0x00000a78      0x2df lib/analog.o
+                                0x445 (size before relaxing)
+ .debug_str     0x00000d57       0x93 lib/serial-dmx.o
+                                0x545 (size before relaxing)
+ .debug_str     0x00000dea       0x25 lib/utilities.o
+                                 0xfd (size before relaxing)
+ .debug_str     0x00000e0f       0x4e /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+                                 0xd2 (size before relaxing)
+ .debug_str     0x00000e5d      0x1c5 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+                                0x2d5 (size before relaxing)
+ .debug_str     0x00001022      0x184 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+                                0x493 (size before relaxing)
+ .debug_str     0x000011a6       0xc4 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+                                0x380 (size before relaxing)
+ .debug_str     0x0000126a      0x100 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+                                0x21c (size before relaxing)
+ .debug_str     0x0000136a      0x56e /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+                                0x840 (size before relaxing)
+ .debug_str     0x000018d8       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+                                0x107 (size before relaxing)
+ .debug_str     0x00001903      0x1fb /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+                                0x359 (size before relaxing)
+ .debug_str     0x00001afe      0x6ab /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+                                0xb32 (size before relaxing)
+
+.debug_loc      0x00000000     0x1c36
+ *(.debug_loc)
+ .debug_loc     0x00000000       0xee lib/serial.o
+ .debug_loc     0x000000ee       0x38 lib/pindef.o
+ .debug_loc     0x00000126      0x1f2 main.o
+ .debug_loc     0x00000318       0xf0 lib/i2c.o
+ .debug_loc     0x00000408      0x1ec lib/display.o
+ .debug_loc     0x000005f4       0x70 lib/keypad.o
+ .debug_loc     0x00000664      0x150 lib/analog.o
+ .debug_loc     0x000007b4      0x188 lib/serial-dmx.o
+ .debug_loc     0x0000093c       0x38 lib/utilities.o
+ .debug_loc     0x00000974       0x58 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_loc     0x000009cc      0x2d8 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_loc     0x00000ca4      0x190 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_loc     0x00000e34      0x118 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_loc     0x00000f4c      0x508 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_loc     0x00001454       0x38 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_loc     0x0000148c      0x150 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_loc     0x000015dc      0x65a /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x25
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x19 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crti.o
+ .ARM.attributes
+                0x00000019       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtbegin.o
+ .ARM.attributes
+                0x00000042       0x31 lib/serial.o
+ .ARM.attributes
+                0x00000073       0x31 lib/pindef.o
+ .ARM.attributes
+                0x000000a4       0x31 main.o
+ .ARM.attributes
+                0x000000d5       0x31 lib/i2c.o
+ .ARM.attributes
+                0x00000106       0x31 lib/display.o
+ .ARM.attributes
+                0x00000137       0x31 lib/keypad.o
+ .ARM.attributes
+                0x00000168       0x31 lib/analog.o
+ .ARM.attributes
+                0x00000199       0x31 lib/serial-dmx.o
+ .ARM.attributes
+                0x000001ca       0x31 lib/utilities.o
+ .ARM.attributes
+                0x000001fb       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .ARM.attributes
+                0x0000022c       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .ARM.attributes
+                0x0000025d       0x21 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .ARM.attributes
+                0x0000027e       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-atoi.o)
+ .ARM.attributes
+                0x000002a7       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x000002d0       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcat.o)
+ .ARM.attributes
+                0x000002f9       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcpy.o)
+ .ARM.attributes
+                0x00000322       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x0000034b       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strtol.o)
+ .ARM.attributes
+                0x00000374       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfprintf.o)
+ .ARM.attributes
+                0x0000039d       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-vsprintf.o)
+ .ARM.attributes
+                0x000003c6       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x000003ef       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-dtoa.o)
+ .ARM.attributes
+                0x00000418       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000441       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-locale.o)
+ .ARM.attributes
+                0x0000046a       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x00000493       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x000004bc       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memchr.o)
+ .ARM.attributes
+                0x000004e5       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x0000050e       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000537       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-mprec.o)
+ .ARM.attributes
+                0x00000560       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-s_fpclassify.o)
+ .ARM.attributes
+                0x00000589       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x000005b2       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x000005db       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-svfiprintf.o)
+ .ARM.attributes
+                0x00000604       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-callocr.o)
+ .ARM.attributes
+                0x0000062d       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000656       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x0000067f       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000006a8       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reallocr.o)
+ .ARM.attributes
+                0x000006d1       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-reent.o)
+ .ARM.attributes
+                0x000006fa       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000715       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000730       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000074b       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000766       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000781       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x0000079c       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x000007b7       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x000007e0       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(unwind-arm.o)
+ .ARM.attributes
+                0x00000809       0x1b /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(libunwind.o)
+ .ARM.attributes
+                0x00000824       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(pr-support.o)
+ .ARM.attributes
+                0x0000084d       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x00000876       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x0000089f       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-abort.o)
+ .ARM.attributes
+                0x000008c8       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signal.o)
+ .ARM.attributes
+                0x000008f1       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libg.a(lib_a-signalr.o)
+ .ARM.attributes
+                0x0000091a       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(start_c.o)
+ .ARM.attributes
+                0x00000943       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_exit.o)
+ .ARM.attributes
+                0x0000096c       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_kill.o)
+ .ARM.attributes
+                0x00000995       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-sbrk.o)
+ .ARM.attributes
+                0x000009be       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-_getpid.o)
+ .ARM.attributes
+                0x000009e7       0x19 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3unhosted.a(unhosted-start.o)
+ .ARM.attributes
+                0x00000a00       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000a29       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000a52       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libcs3.a(heap.o)
+ .ARM.attributes
+                0x00000a7b       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .ARM.attributes
+                0x00000aac       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .ARM.attributes
+                0x00000add       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .ARM.attributes
+                0x00000b0e       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .ARM.attributes
+                0x00000b3f       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .ARM.attributes
+                0x00000b70       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .ARM.attributes
+                0x00000ba1       0x31 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+ .ARM.attributes
+                0x00000bd2       0x29 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+ .ARM.attributes
+                0x00000bfb       0x19 /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+LOAD /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libstdc++.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libm.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a
+START GROUP
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/libgcc.a
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/arm-none-eabi/lib/thumb2/libc.a
+END GROUP
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtend.o
+LOAD /opt/york/cs/net/sourcery-g++-lite-arm-eabi-2010.09.51-i686-1/bin/../lib/gcc/arm-none-eabi/4.5.1/thumb2/crtn.o
+OUTPUT(bin/dmx elf32-littlearm)
+
+.debug_pubtypes
+                0x00000000      0x823
+ .debug_pubtypes
+                0x00000000       0x6f lib/serial.o
+ .debug_pubtypes
+                0x0000006f       0x2a lib/pindef.o
+ .debug_pubtypes
+                0x00000099       0x52 main.o
+ .debug_pubtypes
+                0x000000eb       0x3f lib/i2c.o
+ .debug_pubtypes
+                0x0000012a       0x4e lib/display.o
+ .debug_pubtypes
+                0x00000178       0x3f lib/keypad.o
+ .debug_pubtypes
+                0x000001b7       0x5f lib/analog.o
+ .debug_pubtypes
+                0x00000216       0x3f lib/serial-dmx.o
+ .debug_pubtypes
+                0x00000255       0x1e lib/utilities.o
+ .debug_pubtypes
+                0x00000273       0x12 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/core_cm3.o
+ .debug_pubtypes
+                0x00000285       0x57 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_pubtypes
+                0x000002dc       0x90 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_pubtypes
+                0x0000036c       0x6b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_pubtypes
+                0x000003d7       0x73 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_pubtypes
+                0x0000044a      0x113 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_pubtypes
+                0x0000055d       0x2b /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_pubtypes
+                0x00000588       0x76 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_pubtypes
+                0x000005fe      0x225 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
+
+.debug_ranges   0x00000000      0x4b8
+ .debug_ranges  0x00000000       0x28 lib/serial.o
+ .debug_ranges  0x00000028       0x10 lib/pindef.o
+ .debug_ranges  0x00000038       0x50 main.o
+ .debug_ranges  0x00000088       0x28 lib/i2c.o
+ .debug_ranges  0x000000b0       0x50 lib/display.o
+ .debug_ranges  0x00000100       0x18 lib/keypad.o
+ .debug_ranges  0x00000118       0x38 lib/analog.o
+ .debug_ranges  0x00000150       0x40 lib/serial-dmx.o
+ .debug_ranges  0x00000190       0x10 lib/utilities.o
+ .debug_ranges  0x000001a0       0x18 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/system_LPC17xx.o
+ .debug_ranges  0x000001b8       0x20 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/startup_LPC17xx.o
+ .debug_ranges  0x000001d8       0x70 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_adc.o)
+ .debug_ranges  0x00000248       0x48 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_clkpwr.o)
+ .debug_ranges  0x00000290       0x30 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_dac.o)
+ .debug_ranges  0x000002c0       0xc0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_i2c.o)
+ .debug_ranges  0x00000380       0x10 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_libcfg_default.o)
+ .debug_ranges  0x00000390       0x38 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_pinsel.o)
+ .debug_ranges  0x000003c8       0xf0 /opt/york/cs/net/lpc1700-cmsis-lite-2011.01.26-i686-1/lib/libDriversLPC17xxgnu.a(lpc17xx_uart.o)
