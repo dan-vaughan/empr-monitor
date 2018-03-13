@@ -98,6 +98,11 @@ void myaction(int button)
 			state = 5;
 			menu(5);
 		}
+
+        if (labels[button] == '0'){
+            state = 0;
+            menu(0);
+        }
 	}
 
     if (state == 5){
