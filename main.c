@@ -31,26 +31,22 @@ char strbuf[20];
 
 char break_code[3] = {0x42,0x84,0xc6};
 
-void packet_begin();
 void packet_viewer(int action);
 void wait_for_break();
 
 void myaction(int button)
 {
-	//printchar(labels[button]);
 
  	//From state 0 to {1,2}	
 	if (state == 0){
 		if (labels[button] == 'A'){
 			state = 1;
 			menu(1);
-		//	pc.write("Real mode selected.\n\r");
 		}
 
 		if (labels[button] == 'B'){
 			state = 2;	
 			menu(2);
-		//	pc.write("DMX mode selected.\n\r");
 		}
         if (labels[button] == '*'){
             state = 8;
@@ -70,13 +66,11 @@ void myaction(int button)
 		if ((labels[button] == 'B') || (labels[button] == 'C') || (labels[button] == 'D')){
 			state = 2;
 			menu(2);
-		//	pc.write("DMX mode selected.\n\r");
 		}
 
 		if(labels[button] == '0'){
 			state = 99;
 			menu(99);
-		//	pc.write("Real mode paused.\n\r");
 		}
 	}
 	
@@ -93,36 +87,31 @@ void myaction(int button)
 		if (labels[button] == 'A'){
 			state = 1;
 			menu(1);
-		//	pc.write("Real mode selected.\n\r");
 		}
 
 		if (labels[button] == 'C'){
 			state = 3;
 			menu(3);
-		//	pc.write("Capturing next packet...\n\r");
 		}
 		
 		if (labels[button] == 'D'){
 			state = 5;
 			menu(5);
-			//pc.write("Trigger mode selected.\n\r");
 		}
 	}
 
     if (state == 5){
 
             if (labels[button] == 'A'){
-            //pc.write("Changing trigger.\n\r");
-            state = 11;
-            menu(6);
+                state = 11;
+                menu(6);
 
             return;
-        }
-        if (labels[button] == 'B'){
-            //pc.write("Capturing.");
-            state = 6;
-            menu(7);
-        }
+            }
+            if (labels[button] == 'B'){
+                state = 6;
+                menu(7);
+            }
     }
 
     if (state == 11){
@@ -167,7 +156,6 @@ void myaction(int button)
                     printstr(strbuf);
                     printstr("---");
                     sprintf(strbuf, "%d\n\r", trigger_slot);
-            //        pc.write(strbuf); 
                     delay(7000000);
                     state = 5;
                     menu(5);
@@ -294,7 +282,7 @@ void menu(int screen)
 	
 	if (screen == 2){
 		clear_display();
-		return_home();				//FIGURE OUT WHICH WAY ROUND YOU NEED THESE
+		return_home();
 		clear_display();
 		printstr("C: Capture Next");
 		shift_line();
@@ -385,80 +373,6 @@ void packet_viewer(int action)
 		printstr(strbuf);
 }
 
-void packet_begin()
-{
-	//Reads and prints the first 20 bytes.
-
-	//Check if 1-reads correspond to BREAK and MAB
- 
-	int count = 0;
-	int read_success;
-	uint8_t buf[5]; 
-	char cbuf[5];
-	char strbuf[10];
-
-	while(1){
-
-		if(count>20){
-		//	pc.write("Terminating...\n\r");
-			return;
-		}
-
-		read_success = dmx.read((uint8_t*)cbuf);
-
-		if(read_success < 1){
-			cbuf[0] = 0;		//if UART_Read fails, set buf to 0
-			cbuf[1] = 0;		//so we don't print garbage
-			cbuf[2] = 0;
-			cbuf[3] = 0;
-			cbuf[4] = 0;
-			continue;
-		}
-	
-		for(int i = 0; i<read_success; i++){
-			if(i==0){
-				sprintf(strbuf,"%d - %#2.2x\n\r",read_success, cbuf[i]);
-		//		pc.write(strbuf);
-			}else{
-				sprintf(strbuf,"  - %#2.2x\n\r",cbuf[i]);
-		//		pc.write(strbuf);
-			}
-			count++;
-		}
-	}
-}
-
-void grab_four_bytes(char* cbuf)
-{
-
-	//Reads and writes the next four bytes to cbuf
-
-	int count = 0;
-	int read_success;
-	uint8_t buf[5]; 
-	char strbuf[10];
-	int j=0;
-	while(1){
-		if(count>5){
-			//pc.write("Terminating...\n\r");
-			return;
-		}
-		read_success = dmx.read(buf);
-		for(int i = 0; i<read_success; i++){
-			if(i==0){
-			//	sprintf(strbuf,"%d - %#2.2x\n\r",read_success, buf[i]);
-			//	pc.write(strbuf);
-				cbuf[j] = buf[i];
-			}else{
-			//	sprintf(strbuf,"  - %#2.2x\n\r",buf[i]);
-			//	pc.write(strbuf);
-				cbuf[j] = buf[i];
-			}
-			j++;
-			count++;
-		}
-	}
-}
 
 void grab_packet()
 {
@@ -474,43 +388,18 @@ void grab_packet()
 	while(1){
 
 		if(j>512){
-		//	pc.write("\n\rTerminating...\n\r");
-			//pc.write("\n\r\n\r");
 			return;
 		}
 
 		read_success = dmx.read(buf);
 		if(read_success == 0){ continue;}
         
-        //if (j<128){
-//		    UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)buf,read_success,NONE_BLOCKING);
-       
-        // }
-//		pc.write((char*)buf);
-
 		for(int i = 0; i<read_success; i++){	
 			
-//			if (packet[j+i] != buf[i]){				//CODE DETECTS CHANGES BETWEEN NEW AND OLD PACKET
-//				sprintf(strbuf,"%d - %#2.2x \n\r", j+i, buf[i]);
-//				pc.write(strbuf);
-//			}
-
-//			if(i==0){
-//				sprintf(strbuf,"%d- %d - %#2.2x\n\r", j, read_success, buf[i]);
-//				pc.write(strbuf);
 				packet[j+i] = buf[i];					//THIS FILLS ENTIRE PACKET
-//			}else{
-	//			sprintf(strbuf,"     - %#2.2x\n\r",buf[i]);
+		 }
 
-//				sprintf(strbuf,"%2.2x",buf[i]);
-//				pc.write(strbuf);
-//				packet[j] = buf[i]; 
-//			}
-		}
-		//		sprintf(strbuf,"%2.2x",buf);
-		//		pc.write(strbuf);
-
-			j += read_success;
+	    j += read_success;
 	}
 }
 
@@ -527,9 +416,6 @@ void capture_packet_trigger()
     char strbuf[40];
 
 	while(1){
-        //pc.write("Looping\n\r");
-        //sprintf(strbuf, "found %d\n\r", found);
-        //pc.write(strbuf);
         if(temp_packet[trigger_slot] != packet[trigger_slot]){
             for(int i = 0; i<512; i++){
                     packet[i] = temp_packet[i];
@@ -541,7 +427,6 @@ void capture_packet_trigger()
         wait_for_break();
 
         while(1){
-                //pc.write("Inner Loop.\n\r");
     		if(j>511){
                 j = 0;
 	    	    break;
@@ -551,9 +436,6 @@ void capture_packet_trigger()
 	    	if(read_success == 0){ continue;}
         
 		    for(int i = 0; i<read_success; i++){	
-                //sprintf(strbuf, "temp[%d] %d buf[%d] %d\n\r",(j+i), temp_packet[j+i], i, buf[i]);
-                    //sprintf(strbuf, "%d: %d %d\n\r", (j+i), buf[i], packet[i]);
-                    //pc.write(strbuf);
             	
                     temp_packet[j+i] = buf[i];
 	        	}
@@ -561,32 +443,6 @@ void capture_packet_trigger()
 
 	    }
     }
-}
-
-void print_packet()
-{
-
-	char strbuf[128];
-	char strbuf2[5];	
-	char message[20];
-
-//	strbuf[0] = '\0';
-//	strbuf2[0] = '\0';
-
-//	sprintf(message,"Packet no. %d:\n\r\n\r", total_packets);
-//	pc.write(message);
-
-	for(int i=0; i<16; i++){
-		for (int j=0; j<32;j++){
-			sprintf(strbuf2, "%2.2x",packet[((i*16)+j)]);
-			pc.write(strbuf2);
-            //strcat(strbuf, strbuf2);
-	//		pc.write(packet[(i*16)+j]);
-		}
-	//	pc.write(strbuf);
-	//	strbuf[0] = '\0';
-	}
-//	pc.write("\n\r");
 }
 
 void wait_for_break()
@@ -609,8 +465,6 @@ void wait_for_break()
 int main()
 {
 
-//	pc.write("Starting...\n\r");
-
 	uint8_t buf[5];
 	char strbuf[80];
     char strbuf2[10];
@@ -628,8 +482,6 @@ int main()
 	while (1)
 	{
 		
-//		sprintf(strbuf,"state: %d\n\r", state);
-//		pc.write(strbuf);
 	
 		if(state == 0){
         
@@ -643,47 +495,16 @@ int main()
 			while (state == 1){
 
                 //Realtime mode, captures prints first 4 bytes of packet to LCD.
-                //Also is where I put code to test other stuff.
 
 				keypad_check(myaction);
 				return_home();
 				shift_line();		
 				wait_for_break();	
-//				new_grab();
-			//	pc.write(break_code);
 				grab_packet();
-               // print_packet();
-    	//		pc.write(newline);
-	//			grab_four_bytes(cbuf);
-//				pc.write(packet);
-                //UART_Receive((LPC_UART_TypeDef *)LPC_UART1,(uint8_t*)packet,512, NONE_BLOCKING);
 				for(int i=1; i<5;i++){
 					sprintf(strbuf, "%3d ",packet[i]);
-				//	pc.write(strbuf);
 					printstr(strbuf);
 				}
-               // if (triggermod > 3){
-                 //   triggermod = 0;	
-                   // packet[256] = '\0';
-//                    UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet, 16, NONE_BLOCKING);
-
-            //        for(int k=0; k<512; k++){
-              //          sprintf(strbuf, "%d", packet[k]);
-                //        pc.write(strbuf);
-                  //  }
-
-                 //   pc.write(packet);
-                //    pc.write(strbuf); 
- //                   print_packet();
-                    //for (int k=0; k<7; k++){
-                    //UART_Send((LPC_UART_TypeDef *)LPC_UART0, (uint8_t *)packet[k*64], 64, NONE_BLOCKING);
-                   // }
-    		        //UART_Send((LPC_UART_TypeDef *)LPC_UART0,(uint8_t *)packet,512,NONE_BLOCKING);
-                    //print_packet();   
-                   // }
-//                    pc.write(packet);
- 
-            //    pc.write(newline);
                 strbuf[0] = '\0';
                 strbuf2[0] = '\0';
 				total_packets++;	
@@ -714,9 +535,6 @@ int main()
 			grab_packet();
 			pc.write(packet);
 			total_packets++;
-		//	sprintf(strbuf, "Total packets: %d State: %d\n\r", total_packets, state);
-		//	pc.write(strbuf);
-		//	print_packet();	
 			state = 4;
 			packet_index = 0;
 			menu(4);
@@ -790,7 +608,6 @@ int main()
             for(int k = 0; k<IC2limit; k++){
                 sprintf(strbuf2,"%d-",packet[k]);
                 pc.write(strbuf2);
-                //strcat(mstrstrbuf, strbuf2);
             }
 
             strcat(mstrstrbuf, newline);
